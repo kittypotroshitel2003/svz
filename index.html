@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Valley Zvartnots — Складские блоки нового поколения</title>
+  <meta name="description" content="Smart Valley Zvartnots — современный складской комплекс у аэропорта Звартноц, Армения. Модульные блоки, гибкая инфраструктура, международная логистика.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="hero-image.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script>(function(){try{var n=(performance.getEntriesByType('navigation')[0]||{}).type;if(n!=='reload'&&document.referrer&&new URL(document.referrer).origin===location.origin)document.documentElement.classList.add('skip-pl');}catch(e){}})();</script>
+</head>
+<body class="pl-active">
+
+<!-- ═══ PRELOADER ════════════════════════════════════════════ -->
+<div id="preloader" aria-hidden="true">
+  <div id="pl-squares">
+    <div class="pl-sq"></div>
+    <div class="pl-sq"></div>
+    <div class="pl-sq"></div>
+    <div class="pl-sq"></div>
+  </div>
+  <img id="pl-icon-white" src="preloader-icon-white.svg" alt="" aria-hidden="true" draggable="false">
+  <img id="pl-icon"       src="preloader-icon.svg"       alt="" aria-hidden="true" draggable="false">
+  <img id="pl-logo"       src="preloader-logo.svg"       alt="" aria-hidden="true" draggable="false">
+</div>
+<script>!function(){var t='translate(-50%,-50%)';['pl-squares','pl-icon-white','pl-icon','pl-logo'].forEach(function(id){var e=document.getElementById(id);if(e)e.style.transform=t;});}();</script>
+
+<!-- ═══ SIDEBAR PAGE LINE ═══════════════════════════════════ -->
+<div class="page-line" id="page-line" aria-hidden="true"></div>
+
+<!-- ═══════════════ NAV ═══════════════════════════════════ -->
+<nav class="nav" id="nav" aria-label="Основная навигация">
+  <a href="#" class="nav__logo">
+    <img src="logo-nav.svg" alt="Smart Valley Zvartnots" width="253" height="73">
+  </a>
+  <div class="nav__links">
+    <a href="#about">О комплексе</a>
+    <a href="#infrastructure">Инфраструктура</a>
+    <a href="news.html">Новости</a>
+    <a href="#contacts">Контакты</a>
+  </div>
+  <a href="#contact-form" class="nav__cta">
+    Связаться
+    <svg class="nav__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M7 17L17 7M17 7H7M17 7v10"/>
+    </svg>
+  </a>
+  <button class="nav__burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- ═══ MOBILE MENU ══════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav class="mobile-menu__nav">
+    <a href="#about" class="mobile-menu__link">
+      О комплексе
+      <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+    </a>
+    <a href="#infrastructure" class="mobile-menu__link">
+      Инфраструктура
+      <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+    </a>
+    <a href="news.html" class="mobile-menu__link">
+      Новости
+      <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+    </a>
+    <a href="#contacts" class="mobile-menu__link">
+      Контакты
+      <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+    </a>
+  </nav>
+  <a href="#contact-form" class="mobile-menu__cta">
+    Связаться
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+  </a>
+</div>
+
+<!-- Global journey line — fixed, grows with scroll progress -->
+<div class="journey-line" id="journey-line" aria-hidden="true">
+  <div class="journey-line__fill" id="journey-fill"></div>
+</div>
+
+<!-- ═══════════════ HERO ══════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero__bg" style="background-image:url('hero-image.jpg')"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__heading">Складские<br class="mob-br"> блоки нового<br class="mob-br"> поколения</h1>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT ════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="about__brow">
+    <div class="section-label">
+      <span class="section-label__dot"></span>
+      <span class="section-label__text">о компании</span>
+    </div>
+  </div>
+  <div class="about__body">
+    <div class="about__logo reveal--left">
+      <img src="logo-about.svg" alt="Smart Valley Zvartnots logo" width="863" height="250" loading="lazy" decoding="async">
+    </div>
+    <p class="about__text reveal--right" style="transition-delay:0.12s">
+      — логистический комплекс международного уровня вблизи аэропорта Звартноц, объединяющий в себе стратегическую локацию, современные технологии и ESG-подход для эффективного развития бизнеса и международной торговли.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ INFRASTRUCTURE ══════════════════════ -->
+<section class="infrastructure" id="infrastructure">
+  <div class="section-label">
+    <span class="section-label__dot"></span>
+    <span class="section-label__text">о комплексе</span>
+  </div>
+  <div class="infrastructure__header">
+    <h2 class="infrastructure__heading reveal">
+      Инфраструктура, которая адаптируется под ваш бизнес
+    </h2>
+    <p class="infrastructure__desc reveal" style="transition-delay:0.2s">
+      Smart Valley Zvartnots — современный складской комплекс с модульной системой блоков, гибкой внутренней структурой, инженерными системами, безопасностью и возможностью адаптации помещений под задачи арендаторов.
+    </p>
+  </div>
+
+  <div class="warehouse-layout" id="warehouse-layout">
+    <!-- LEFT CARDS -->
+    <div class="warehouse-cards warehouse-cards--left">
+      <div class="infra-card" data-side="left" data-delay="0" data-popup="modular" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-office.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Модульные блоки</div>
+          <div class="infra-card__text">Отдельные складские блоки для арендаторов со своим входом и готовой инфраструктурой.</div>
+        </div>
+      </div>
+      <div class="infra-card" data-side="left" data-delay="1" data-popup="docks" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-truck.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Доки двух типов</div>
+          <div class="infra-card__text">Доки для еврофур, а также для малого и среднего коммерческого транспорта.</div>
+        </div>
+      </div>
+      <div class="infra-card" data-side="left" data-delay="2" data-popup="flexible" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-package.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Гибкое пространство</div>
+          <div class="infra-card__text">Офисные зоны, антресоли и дополнительные площади внутри складского блока.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAREHOUSE SCENE -->
+    <div class="warehouse-scene" id="warehouse-scene">
+      <!-- Корпус склада (всегда виден) -->
+      <div class="warehouse-body">
+        <picture>
+          <source media="(max-width: 640px)" srcset="warehouse-background-mobile.webp" type="image/webp">
+          <source srcset="warehouse-background.webp" type="image/webp">
+          <img src="warehouse-background.png" alt="Склад Smart Valley Zvartnots" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <!-- Крыша (начальное: закрыто; анимируется вверх при скролле) -->
+      <div class="warehouse-roof" id="warehouse-roof">
+        <picture>
+          <source media="(max-width: 640px)" srcset="warehouse-roof-mobile.webp" type="image/webp">
+          <source srcset="warehouse-roof.webp" type="image/webp">
+          <img src="warehouse-roof.png" alt="" loading="eager" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+    <!-- RIGHT CARDS -->
+    <div class="warehouse-cards warehouse-cards--right">
+      <div class="infra-card" data-side="right" data-delay="0" data-popup="security" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-security.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Современная безопасность</div>
+          <div class="infra-card__text">Ограждение, КПП, охрана и доступ к складским блокам 24/7.</div>
+        </div>
+      </div>
+      <div class="infra-card" data-side="right" data-delay="1" data-popup="engineering" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-engineering.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Инженерные системы</div>
+          <div class="infra-card__text">Спринклерное пожаротушение с возможностью локального срабатывания.</div>
+        </div>
+      </div>
+      <div class="infra-card" data-side="right" data-delay="2" data-popup="energy" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="infra-card__icon"><img src="icon-energy.svg" alt="" loading="lazy" decoding="async"></div>
+        <div class="infra-card__body">
+          <div class="infra-card__title">Энергоэффективность</div>
+          <div class="infra-card__text">Солнечные панели, автоматизация обслуживания и снижение эксплуатационных затрат.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DARK SECTIONS ═══════════════════════ -->
+<div class="dark-bg" id="advantages">
+
+  <!-- ─── FAQ ──────────────────────────────────────────── -->
+  <section class="faq" id="questions">
+    <div class="section-label section-label--light" style="margin-bottom:32px">
+      <span class="section-label__dot"></span>
+      <span class="section-label__text">вопросы</span>
+    </div>
+
+    <div class="faq__header">
+      <h2 class="faq__heading reveal" style="--reveal-color:white">Перед тем как выбрать складской блок</h2>
+      <p class="faq__desc reveal" style="transition-delay:0.1s">Здесь собраны ответы на ключевые вопросы об аренде, инфраструктуре и возможностях Smart Valley Zvartnots.</p>
+    </div>
+
+    <div class="faq__body">
+      <div class="faq__left">
+        <div class="faq__tabs">
+          <div class="faq__tab active" data-cat="all">Общее</div>
+          <div class="faq__tab" data-cat="lease">Аренда и условия</div>
+          <div class="faq__tab" data-cat="infra">Инфраструктура</div>
+          <div class="faq__tab" data-cat="tech">Технологии и оснащение</div>
+        </div>
+        <div class="faq__contact">
+          <div class="faq__contact-title">Остались вопросы?</div>
+          <div class="faq__contact-text">Наша команда готова помочь вам с выбором.<br><br><a href="#contact-form" class="faq__contact-link">Связаться с нами →</a></div>
+        </div>
+      </div>
+
+      <div class="faq__right">
+      <div class="faq__item open" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Какие складские блоки доступны арендаторам?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Складской комплекс состоит из модульных блоков, которые могут использоваться как самостоятельные пространства с отдельным входом, зонами доступа и собственной инфраструктурой. Внутри блока могут быть организованы складские, офисные и дополнительные функциональные зоны.</div>
+        </div>
+      </div>
+      <div class="faq__item" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Как проходит процесс выбора складского блока?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Наш менеджер проводит консультацию, уточняет требования к площади и логистике, после чего предлагает оптимальный вариант из доступных блоков. Осмотр объекта возможен как очно, так и онлайн.</div>
+        </div>
+      </div>
+      <div class="faq__item" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Можно ли посмотреть объект до принятия решения?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Да, мы организуем ознакомительный визит на территорию комплекса для всех потенциальных арендаторов. Запись — через форму на сайте или по телефону.</div>
+        </div>
+      </div>
+      <div class="faq__item" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Можно ли объединить склад и офис в одном помещении?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Да, блоки поддерживают антресольные зоны, отдельные офисные помещения и дополнительные площади. Планировка согласовывается индивидуально под задачи арендатора.</div>
+        </div>
+      </div>
+      <div class="faq__item" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Подойдёт ли комплекс для растущего бизнеса?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Модульная структура позволяет расширять арендуемую площадь без переезда — просто добавляя смежные блоки по мере роста потребностей бизнеса.</div>
+        </div>
+      </div>
+      <div class="faq__item" data-cat="all">
+        <div class="faq__question">
+          <span class="faq__question-text">Кто поможет подобрать подходящий формат?</span>
+          <span class="faq__toggle"></span>
+        </div>
+        <div class="faq__answer">
+          <div class="faq__answer-inner">Наш отдел аренды — leasing@smartvalley.am. Специалисты проконсультируют по всем форматам и помогут найти оптимальное решение.</div>
+        </div>
+      </div>
+      <!-- ── Аренда и условия ─────────────────────────────── -->
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Какой минимальный срок аренды?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Минимальный срок аренды составляет 12 месяцев. Для долгосрочного сотрудничества предусмотрены специальные условия и фиксированные ставки на весь период договора.</div></div>
+      </div>
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Входят ли коммунальные услуги в арендную ставку?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Электроснабжение, теплоснабжение и водоснабжение оплачиваются отдельно по фактическому потреблению. Охрана и обслуживание общей территории включены в базовую ставку.</div></div>
+      </div>
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Предусмотрена ли индексация арендной ставки?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Условия индексации фиксируются в договоре аренды. Ставка пересматривается не чаще одного раза в год по заранее согласованному коэффициенту.</div></div>
+      </div>
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Можно ли арендовать несколько блоков одновременно?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Да, предусмотрены групповые условия для арендаторов, занимающих более одного блока. Размер скидки обсуждается индивидуально в зависимости от объёма площади и срока договора.</div></div>
+      </div>
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Каков порядок внесения обеспечительного депозита?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Депозит составляет 1–2 месячных платежа и возвращается по истечении договора при отсутствии задолженностей и повреждений имущества.</div></div>
+      </div>
+      <div class="faq__item" data-cat="lease" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Какие документы нужны для заключения договора?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Для юридических лиц: свидетельство о регистрации, устав, паспорт руководителя. Для ИП: паспорт и свидетельство о регистрации. Менеджер уточнит полный пакет при первичном обращении.</div></div>
+      </div>
+
+      <!-- ── Инфраструктура ───────────────────────────────── -->
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Какова высота потолков в складских блоках?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Стандартная высота до подкровельных конструкций — 8–12 метров в зависимости от типа блока. Это позволяет использовать стеллажное хранение до 5–6 ярусов.</div></div>
+      </div>
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Есть ли зоны погрузки и разгрузки?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">На территории предусмотрены грузовые доки, рампы и крытые зоны погрузки. Количество ворот на блок согласовывается при планировании пространства.</div></div>
+      </div>
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Как организована безопасность периметра?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Периметр оборудован видеонаблюдением, системой контроля доступа и круглосуточной охраной КПП. Возможна интеграция с собственными системами безопасности арендатора.</div></div>
+      </div>
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Какое электроснабжение предусмотрено в блоках?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Каждый блок подключён к выделенной электрической линии. Базовая мощность — 50 кВт, расширение до 150 кВт по запросу. Предусмотрено резервное питание для критических потребителей.</div></div>
+      </div>
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Есть ли парковка для грузовых автомобилей?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Территория включает парковочные зоны для грузовиков (в том числе фур) и легковых автомобилей. Грузовые маршруты полностью отделены от пешеходных зон.</div></div>
+      </div>
+      <div class="faq__item" data-cat="infra" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Как организованы отопление и вентиляция?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Блоки оснащены системой центрального отопления и принудительной вентиляцией. По запросу возможна установка климатического оборудования для поддержания заданного температурного режима хранения.</div></div>
+      </div>
+
+      <!-- ── Технологии и оснащение ─────────────────────── -->
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Поддерживается ли интеграция с WMS-системами?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Инженерные сети подготовлены для подключения систем управления складом (WMS). Кабельные каналы и серверные ниши предусмотрены на этапе строительства блока.</div></div>
+      </div>
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Есть ли высокоскоростной интернет на территории?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Комплекс обеспечен волоконно-оптической магистралью. Каждый блок получает выделенный канал; возможно подключение к нескольким провайдерам для резервирования.</div></div>
+      </div>
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Можно ли установить собственное оборудование?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Да, арендатор вправе монтировать собственное оборудование при соблюдении технических регламентов. Допустимые нагрузки на перекрытия и вводные параметры сетей уточняются при согласовании.</div></div>
+      </div>
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Используется ли энергоэффективное освещение?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Блоки оснащены LED-освещением с датчиками движения и системой управления освещённостью. Солнечные панели на кровле снижают общую нагрузку на электросеть комплекса.</div></div>
+      </div>
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Можно ли оборудовать блок холодильными камерами?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Технически возможно в блоках с соответствующими нагрузками и электрической мощностью. Решение согласовывается с технической службой комплекса.</div></div>
+      </div>
+      <div class="faq__item" data-cat="tech" style="display:none">
+        <div class="faq__question"><span class="faq__question-text">Автоматизированы ли ворота и системы доступа?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner">Секционные ворота оснащены электроприводом с дистанционным управлением. Система контроля доступа поддерживает карточные и мобильные идентификаторы.</div></div>
+      </div>
+
+    </div><!-- /.faq__right -->
+    </div><!-- /.faq__body -->
+  </section>
+
+  <!-- ─── NEWS ──────────────────────────────────────────── -->
+  <section class="news" id="news">
+    <div class="news__header">
+      <div>
+        <div class="section-label section-label--light" style="margin-bottom:24px">
+          <span class="section-label__dot"></span>
+          <span class="section-label__text">новости</span>
+        </div>
+        <h2 class="news__heading reveal">Новости Smart Valley Zvartnots</h2>
+      </div>
+      <p class="news__desc reveal" style="transition-delay:0.15s">Следите за развитием комплекса, новыми этапами строительства, запуском инфраструктуры и событиями, связанными с развитием складского хаба.</p>
+    </div>
+
+    <div class="news__grid">
+
+      <!-- Card 1: Large left (spans 2 rows) -->
+      <a href="article-1.html" class="news-card news-card--large">
+        <div class="news-card__photo-wrap">
+          <video class="news-card__img" autoplay muted loop playsinline preload="none">
+            <source src="news-video-1.mp4" type="video/mp4">
+          </video>
+          <div class="news-card__overlay"></div>
+        </div>
+        <span class="news-card__label">Развитие комплекса</span>
+        <div class="news-card__body">
+          <span class="news-card__date">06.06.2026</span>
+          <h3 class="news-card__title">Старт реализации первой очереди проекта</h3>
+          <p class="news-card__text">Подготовительные работы на территории комплекса завершены. Проект переходит к следующему этапу строительства складской инфраструктуры.</p>
+          <span class="news-card__link">
+            Читать новость
+            <svg class="news-card__link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 2: Middle top (frosted text card) -->
+      <a href="article-2.html" class="news-card news-card--text">
+        <div class="news-card__body news-card__body--text">
+          <div class="news-card__text-header">
+            <span class="news-card__label">Инфраструктура</span>
+            <span class="news-card__date">06.06.2026</span>
+          </div>
+          <h3 class="news-card__title">Продолжается развитие инженерных систем</h3>
+          <p class="news-card__text">В рамках проекта ведётся развитие инженерной системы комплекса с акцентом на снижение эксплуатационных затрат.</p>
+          <span class="news-card__link">
+            Читать новость
+            <svg class="news-card__link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 3: Middle bottom (energy photo) -->
+      <a href="article-3.html" class="news-card news-card--photo">
+        <div class="news-card__photo-wrap">
+          <video class="news-card__img" autoplay muted loop playsinline preload="none">
+            <source src="news-video-3.mp4" type="video/mp4">
+          </video>
+          <div class="news-card__overlay"></div>
+          <div class="news-card__photo-caption">
+            <h3 class="news-card__title">Энергоэффективность</h3>
+            <p class="news-card__text--small">Проектирование энергоэффективной инфраструктуры</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: TICKER CARD — бегущая строка внутри карточки -->
+      <a href="article-4.html" class="news-card news-card--ticker">
+        <div class="news-card__photo-wrap">
+          <video class="news-card__img" autoplay muted loop playsinline preload="none">
+            <source src="news-video-4.mp4" type="video/mp4">
+          </video>
+          <div class="news-card__overlay news-card__overlay--ticker"></div>
+        </div>
+        <div class="news-card__ticker-top">
+          <span class="news-card__label">Развитие транспортной инфраструктуры</span>
+        </div>
+        <div class="news-card__ticker-bottom">
+          <!-- Row 1 →  E-commerce · Дистрибуция · Логистика -->
+          <div class="news-ticker" aria-hidden="true">
+            <div class="news-ticker__track">
+              <div class="tag-pill tag-pill--ecommerce"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>E-commerce</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>Дистрибуция</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>Логистика</div>
+              <div class="tag-pill tag-pill--ecommerce"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>E-commerce</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>Дистрибуция</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>Логистика</div>
+            </div>
+          </div>
+          <!-- Row 2 ← Производство · Масштабирование (scrolls right) -->
+          <div class="news-ticker" aria-hidden="true">
+            <div class="news-ticker__track news-ticker__track--reverse">
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span>Производство</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>Масштабирование</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span>Производство</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>Масштабирование</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 5: "Read all" CTA -->
+      <a href="news.html" class="news-card news-card--cta">
+        <span class="news-cta__text">Читать все новости</span>
+        <svg class="news-cta__arrow" viewBox="0 0 58 58" fill="none">
+          <path d="M41.0833 16.917L14.5 43.5003" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M19.3334 14.5H42.5C42.9714 14.5 43.2071 14.5 43.3536 14.6464C43.5 14.7929 43.5 15.0286 43.5 15.5V38.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════ CONTACTS + MAP ═══════════════════════ -->
+<section class="contacts" id="contacts">
+  <div class="section-label">
+    <span class="section-label__dot"></span>
+    <span class="section-label__text">контакты</span>
+  </div>
+  <h2 class="contacts__heading reveal">Контактная информация</h2>
+  <div class="contacts__layout">
+    <div class="contacts__globe-wrap reveal">
+      <div id="map"></div>
+    </div>
+    <div class="contacts__info reveal" style="transition-delay:0.2s">
+      <div class="contact-block">
+        <div class="contact-block__label">Адрес</div>
+        <div class="contact-block__value">Район международного аэропорта «Звартноц»<br>Армения</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block__label">Телефон</div>
+        <div class="contact-block__value">+374 XX XXX XXX</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block__label">E-mail</div>
+        <div class="contact-block__value">info@smartvalley.am</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block__label">Отдел аренды</div>
+        <div class="contact-block__value">leasing@smartvalley.am</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block__label">Режим работы</div>
+        <div class="contact-block__value">Понедельник — Пятница<br>09:00 — 18:00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FORM ══════════════════════════════════ -->
+<section class="contact-form-section" id="contact-form">
+  <div class="section-label" style="margin-bottom:40px">
+    <span class="section-label__dot"></span>
+    <span class="section-label__text">заказать звонок</span>
+  </div>
+  <div class="form__header">
+    <h2 class="form__heading reveal">Получите предложение под задачи вашего бизнеса</h2>
+    <p class="form__desc reveal" style="transition-delay:0.1s">Расскажите о требованиях к площади, логистике и организации хранения — мы подготовим решение, соответствующее вашим операционным задачам.</p>
+  </div>
+  <form class="form__body" id="form-main" novalidate>
+    <div class="reveal" style="transition-delay:0.2s">
+      <div class="form__fields">
+        <div class="form__field-wrap">
+          <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="given-name" aria-label="Ваше имя">
+          <div class="form__error">Пожалуйста, введите ваше имя</div>
+        </div>
+        <div class="form__field-wrap">
+          <input class="form__input" type="text" name="company" placeholder="Компания" autocomplete="organization" aria-label="Название компании">
+          <div class="form__error">Пожалуйста, введите название компании</div>
+        </div>
+        <div class="form__field-wrap">
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" aria-label="Номер телефона">
+          <div class="form__error">Введите корректный номер телефона</div>
+        </div>
+      </div>
+      <button class="form__submit" type="submit">
+        Отправить
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </button>
+      <p class="form__legal">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
+    </div>
+    <div class="form__right reveal" style="transition-delay:0.15s">
+      <picture>
+        <source srcset="form-image.webp" type="image/webp">
+        <img src="form-image.png" alt="Smart Valley Zvartnots" loading="lazy" decoding="async">
+      </picture>
+    </div>
+  </form>
+</section>
+
+<!-- ═══════════════ FOOTER ════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-dots" aria-hidden="true">
+    <div class="footer-dots__line"></div>
+  </div>
+  <div class="site-footer__inner">
+
+    <div class="site-footer__top">
+      <p class="site-footer__tagline">Современное складское пространство с гибкой модульной системой хранения</p>
+      <div class="site-footer__navs">
+        <nav class="site-footer__nav" aria-label="Разделы">
+          <a href="#about">Комплекс</a>
+          <a href="news.html">Новости</a>
+          <a href="#questions">Вопросы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <nav class="site-footer__nav site-footer__nav--wide" aria-label="Документы">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Согласие на обработку персональных данных</a>
+          <a href="#">Пользовательское соглашение</a>
+        </nav>
+        <nav class="site-footer__nav" aria-label="Платформы">
+          <a href="#">МАКС</a>
+          <a href="#">RuTube</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="site-footer__logo-row">
+      <img src="logo-footer.svg" alt="Smart Valley Zvartnots" class="site-footer__logo-img" width="907" height="262" loading="lazy" decoding="async">
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
+      <p class="site-footer__made-by">разработано <a href="https://podpisait.ru/" target="_blank" rel="noopener noreferrer"><img src="podpisait-logo.svg" alt="подписайт" class="site-footer__made-by-img"></a></p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ═══ INFRA POPUP ══════════════════════════════════════════ -->
+<div id="infra-popup-overlay" class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="popup-title-el">
+  <div class="popup" id="infra-popup">
+    <button class="popup__close" id="popup-close" aria-label="Закрыть">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <path d="M1.5 1.5L16.5 16.5M16.5 1.5L1.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="popup__img-wrap">
+      <img class="popup__img" id="popup-img-el" src="" alt="">
+    </div>
+    <div class="popup__content" id="popup-content-el">
+      <h2 class="popup__title" id="popup-title-el"></h2>
+      <p class="popup__desc" id="popup-desc-el"></p>
+      <p class="popup__features-label">Что включает</p>
+      <div class="popup__features" id="popup-features-el"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SUCCESS POPUP ════════════════════════════════════════ -->
+<div id="form-success-overlay" class="success-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="success-popup-title">
+  <div class="success-popup">
+    <button class="success-popup__close" id="success-popup-close" aria-label="Закрыть">
+      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <path d="M1.5 1.5L16.5 16.5M16.5 1.5L1.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="success-popup__icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#43a047" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <h2 class="success-popup__title" id="success-popup-title">Заявка отправлена</h2>
+    <p class="success-popup__desc">Наш менеджер свяжется с вами в течение рабочего дня. Спасибо за интерес к Smart Valley Zvartnots.</p>
+    <button class="success-popup__btn" id="success-popup-ok">Отлично</button>
+  </div>
+</div>
+
+<!-- ═══ COOKIE BANNER ══════════════════════════════════════ -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Уведомление о cookies">
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <strong>Мы используем cookies</strong>
+      Для корректной работы сайта и улучшения вашего опыта мы используем файлы cookie. Продолжая использование сайта, вы соглашаетесь с <a href="#">политикой обработки данных</a>.
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__accept" id="cookie-accept">Принять</button>
+      <button class="cookie-banner__decline" id="cookie-decline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>

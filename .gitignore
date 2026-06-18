@@ -1,0 +1,22 @@
+.env
+_env
+node_modules
+dist
+deploy.config.json
+.DS_Store
+.claude
+CLAUDE_FULL.md
+CLAUDE.md
+AGENTS.md
+package-lock.json
+debug-*
+mob-*
+final-mob-*
+final-tab-*
+fix-*
+screen-*
+verify-*
+screenshot*.mjs
+serve.mjs
+test-logo.mjs
+temporary screenshots

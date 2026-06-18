@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости — Smart Valley Zvartnots</title>
+  <meta name="description" content="Все новости Smart Valley Zvartnots — развитие комплекса, строительство, инфраструктура и события.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════════════════════════ -->
+<nav class="nav scrolled" id="nav" aria-label="Основная навигация">
+  <a href="index.html" class="nav__logo">
+    <img src="logo-nav.svg" alt="Smart Valley Zvartnots" width="253" height="73">
+  </a>
+  <div class="nav__links">
+    <a href="index.html#about">О комплексе</a>
+    <a href="index.html#infrastructure">Инфраструктура</a>
+    <a href="news.html" style="color:var(--accent)">Новости</a>
+    <a href="index.html#contacts">Контакты</a>
+  </div>
+  <a href="index.html#contact-form" class="nav__cta">
+    Связаться
+    <svg class="nav__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M7 17L17 7M17 7H7M17 7v10"/>
+    </svg>
+  </a>
+</nav>
+
+<!-- ═══════════════ PAGE HERO ════════════════════════════ -->
+<div class="news-page-hero">
+  <h1 class="news-page-hero__heading">Новости</h1>
+  <p class="news-page-hero__count">4 материала</p>
+</div>
+
+<!-- ═══════════════ NEWS GRID ════════════════════════════ -->
+<div class="news-page-body">
+  <div class="news-page-grid">
+
+    <!-- Article 1 -->
+    <a href="article-1.html" class="news-list-card">
+      <div class="news-list-card__media">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="news-video-1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="news-list-card__body">
+        <div class="news-list-card__cat">Развитие комплекса</div>
+        <div class="news-list-card__title">Старт реализации первой очереди проекта</div>
+        <div class="news-list-card__desc">Подготовительные работы на территории комплекса завершены. Проект переходит к следующему этапу — строительству складской инфраструктуры первой очереди.</div>
+        <div class="news-list-card__footer">
+          <span class="news-list-card__date">06.06.2026</span>
+          <span class="news-list-card__link">
+            Читать
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 2 -->
+    <a href="article-2.html" class="news-list-card">
+      <div class="news-list-card__media">
+        <img src="article-2-cover.jpg" alt="Инженерные системы" loading="lazy" decoding="async">
+      </div>
+      <div class="news-list-card__body">
+        <div class="news-list-card__cat">Инфраструктура</div>
+        <div class="news-list-card__title">Продолжается развитие инженерных систем</div>
+        <div class="news-list-card__desc">В рамках проекта ведётся развитие инженерной системы комплекса с акцентом на снижение эксплуатационных затрат и повышение надёжности.</div>
+        <div class="news-list-card__footer">
+          <span class="news-list-card__date">06.06.2026</span>
+          <span class="news-list-card__link">
+            Читать
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 3 -->
+    <a href="article-3.html" class="news-list-card">
+      <div class="news-list-card__media">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="news-video-3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="news-list-card__body">
+        <div class="news-list-card__cat">Технологии</div>
+        <div class="news-list-card__title">Энергоэффективность как основа комплекса</div>
+        <div class="news-list-card__desc">Проектирование энергоэффективной инфраструктуры: солнечные панели, автоматизированное управление и LED-освещение с датчиками движения.</div>
+        <div class="news-list-card__footer">
+          <span class="news-list-card__date">05.06.2026</span>
+          <span class="news-list-card__link">
+            Читать
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 4 -->
+    <a href="article-4.html" class="news-list-card">
+      <div class="news-list-card__media">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="news-video-4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="news-list-card__body">
+        <div class="news-list-card__cat">Логистика</div>
+        <div class="news-list-card__title">Развитие транспортной инфраструктуры</div>
+        <div class="news-list-card__desc">Комплекс Smart Valley Zvartnots формирует транспортный хаб у аэропорта Звартноц с доками для еврофур и организованной системой въезда.</div>
+        <div class="news-list-card__footer">
+          <span class="news-list-card__date">04.06.2026</span>
+          <span class="news-list-card__link">
+            Читать
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ═══════════════ FOOTER ════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-dots" aria-hidden="true">
+    <div class="footer-dots__line"></div>
+  </div>
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <p class="site-footer__tagline">Современное складское пространство с гибкой модульной системой хранения</p>
+      <div class="site-footer__navs">
+        <nav class="site-footer__nav" aria-label="Разделы">
+          <a href="index.html#about">Комплекс</a>
+          <a href="news.html">Новости</a>
+          <a href="index.html#questions">Вопросы</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <nav class="site-footer__nav site-footer__nav--wide" aria-label="Документы">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Согласие на обработку персональных данных</a>
+          <a href="#">Пользовательское соглашение</a>
+        </nav>
+        <nav class="site-footer__nav" aria-label="Платформы">
+          <a href="#">МАКС</a>
+          <a href="#">RuTube</a>
+        </nav>
+      </div>
+    </div>
+    <div class="site-footer__logo-row">
+      <img src="logo-footer.svg" alt="Smart Valley Zvartnots" class="site-footer__logo-img" width="907" height="262" loading="lazy" decoding="async">
+    </div>
+    <p class="site-footer__copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
