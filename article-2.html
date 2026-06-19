@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Развитие инженерных систем — Smart Valley Zvartnots</title>
-  <meta name="description" content="В рамках проекта ведётся развитие инженерной системы комплекса с акцентом на снижение эксплуатационных затрат и повышение надёжности.">
+  <title data-i18n="a2.heading">Развитие инженерных систем — Smart Valley Zvartnots</title>
+  <meta name="description" content="Развитие инженерных систем Smart Valley Zvartnots.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,130 +14,114 @@
 </head>
 <body>
 
-<!-- ═══════════════ NAV ═══════════════════════════════════ -->
-<nav class="nav scrolled" id="nav" aria-label="Основная навигация">
+<nav class="nav scrolled" id="nav">
   <a href="index.html" class="nav__logo">
     <img src="logo-nav.svg" alt="Smart Valley Zvartnots" width="253" height="73">
   </a>
   <div class="nav__links">
-    <a href="index.html#about">О комплексе</a>
-    <a href="index.html#infrastructure">Инфраструктура</a>
-    <a href="news.html">Новости</a>
-    <a href="index.html#contacts">Контакты</a>
+    <a href="index.html#about" data-i18n="nav.about">О комплексе</a>
+    <a href="index.html#infrastructure" data-i18n="nav.infra">Инфраструктура</a>
+    <a href="news.html" data-i18n="nav.news">Новости</a>
+    <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
   </div>
-  <a href="index.html#contact-form" class="nav__cta">
+  <div class="nav__lang">
+    <button class="nav__lang-btn active" data-lang="ru">RU</button>
+    <button class="nav__lang-btn" data-lang="en">EN</button>
+    <button class="nav__lang-btn" data-lang="hy">HY</button>
+  </div>
+  <a href="index.html#contact-form" class="nav__cta" data-i18n="nav.cta">
     Связаться
-    <svg class="nav__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M7 17L17 7M17 7H7M17 7v10"/>
-    </svg>
+    <svg class="nav__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
   </a>
+  <button class="nav__burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- ═══════════════ ARTICLE HERO ═════════════════════════ -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav class="mobile-menu__nav">
+    <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">О комплексе <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    <a href="index.html#infrastructure" class="mobile-menu__link" data-i18n="nav.infra">Инфраструктура <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    <a href="news.html" class="mobile-menu__link" data-i18n="nav.news">Новости <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+    <a href="index.html#contacts" class="mobile-menu__link" data-i18n="nav.contacts">Контакты <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </nav>
+  <a href="index.html#contact-form" class="mobile-menu__cta" data-i18n="nav.cta">Связаться <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  <div class="mobile-menu__lang">
+    <button class="nav__lang-btn active" data-lang="ru">RU</button>
+    <button class="nav__lang-btn" data-lang="en">EN</button>
+    <button class="nav__lang-btn" data-lang="hy">HY</button>
+  </div>
+</div>
+
 <div class="article-hero">
   <div class="article-hero__bg" style="background-image:url('hero-image.jpg')"></div>
   <div class="article-hero__overlay"></div>
   <div class="article-hero__content">
     <a href="news.html" class="article-hero__back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
-      Все новости
+      <span data-i18n="art.back">Все новости</span>
     </a>
-    <div class="article-hero__label">Инфраструктура</div>
-    <h1 class="article-hero__heading">Продолжается развитие инженерных систем</h1>
+    <div class="article-hero__label" data-i18n="a2.label">Инфраструктура</div>
+    <h1 class="article-hero__heading" data-i18n="a2.heading">Продолжается развитие инженерных систем</h1>
     <div class="article-hero__meta">
-      <span>06 июня 2026</span>
+      <span data-i18n="a2.meta.date">06 июня 2026</span>
       <span class="article-hero__meta-sep"></span>
-      <span>4 мин чтения</span>
+      <span data-i18n="a2.meta.read">4 мин чтения</span>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ ARTICLE BODY ════════════════════════ -->
 <article>
   <div class="article-body">
-
-    <p class="article-body__lead">
-      В рамках подготовки первой очереди ведётся комплексное развитие инженерных систем Smart Valley Zvartnots. Основной акцент — на надёжность, снижение операционных затрат и возможность масштабирования без дополнительных перестроек.
-    </p>
-
-    <p>
-      Проектирование инженерной части комплекса шло параллельно с проработкой архитектурного решения. Задача инженеров — создать инфраструктуру, которая работает в фоновом режиме, не требует постоянного вмешательства персонала и при этом легко интегрируется с оборудованием арендаторов.
-    </p>
-
-    <h2>Системы пожарной безопасности</h2>
-
-    <p>
-      Каждый складской блок оснащается спринклерной системой с возможностью локального срабатывания. В отличие от традиционных решений с зональным активированием, система Smart Valley Zvartnots реагирует точечно — только в зоне возгорания. Это существенно снижает риск порчи товара в других частях склада при аварийном срабатывании.
-    </p>
-
-    <p>
-      Спринклерные линии прокладываются ещё на этапе строительства, что позволяет арендаторам получить готовую систему без дополнительных капиталовложений. Трубная разводка рассчитана с запасом для возможной установки дополнительных секций при изменении внутренней планировки блока.
-    </p>
-
-    <h2>Электроснабжение и резервирование</h2>
-
-    <p>
-      Каждый блок подключён к выделенной электрической линии. Базовая мощность составляет 50 кВт, с возможностью расширения до 150 кВт по запросу арендатора. Кабельные каналы для дополнительного оборудования (серверные стойки, зарядные станции для техники, мощные осветительные системы) закладываются заранее.
-    </p>
-
-    <p>
-      Для критически важных потребителей предусмотрена возможность подключения резервного питания. Распределительные щиты размещены в легкодоступных зонах и позволяют арендаторам управлять нагрузкой самостоятельно.
-    </p>
-
-    <h2>Отопление и вентиляция</h2>
-
-    <p>
-      Складские блоки оснащены системой централизованного теплоснабжения и принудительной вентиляцией. По запросу возможна установка климатического оборудования для поддержания заданного температурного режима — актуально для хранения чувствительных к температуре товаров.
-    </p>
-
+    <p class="article-body__lead" data-i18n="a2.lead">В рамках подготовки первой очереди ведётся комплексное развитие инженерных систем Smart Valley Zvartnots. Основной акцент — на надёжность, снижение операционных затрат и возможность масштабирования без дополнительных перестроек.</p>
+    <p data-i18n="a2.p1">Проектирование инженерной части комплекса шло параллельно с проработкой архитектурного решения. Задача инженеров — создать инфраструктуру, которая работает в фоновом режиме, не требует постоянного вмешательства персонала и при этом легко интегрируется с оборудованием арендаторов.</p>
+    <h2 data-i18n="a2.h2.1">Системы пожарной безопасности</h2>
+    <p data-i18n="a2.p2">Каждый складской блок оснащается спринклерной системой с возможностью локального срабатывания. В отличие от традиционных решений с зональным активированием, система Smart Valley Zvartnots реагирует точечно — только в зоне возгорания. Это существенно снижает риск порчи товара в других частях склада при аварийном срабатывании.</p>
+    <p data-i18n="a2.p3">Спринклерные линии прокладываются ещё на этапе строительства, что позволяет арендаторам получить готовую систему без дополнительных капиталовложений. Трубная разводка рассчитана с запасом для возможной установки дополнительных секций при изменении внутренней планировки блока.</p>
+    <h2 data-i18n="a2.h2.2">Электроснабжение и резервирование</h2>
+    <p data-i18n="a2.p4">Каждый блок подключён к выделенной электрической линии. Базовая мощность составляет 50 кВт, с возможностью расширения до 150 кВт по запросу арендатора. Кабельные каналы для дополнительного оборудования (серверные стойки, зарядные станции для техники, мощные осветительные системы) закладываются заранее.</p>
+    <p data-i18n="a2.p5">Для критически важных потребителей предусмотрена возможность подключения резервного питания. Распределительные щиты размещены в легкодоступных зонах и позволяют арендаторам управлять нагрузкой самостоятельно.</p>
+    <h2 data-i18n="a2.h2.3">Отопление и вентиляция</h2>
+    <p data-i18n="a2.p6">Складские блоки оснащены системой централизованного теплоснабжения и принудительной вентиляцией. По запросу возможна установка климатического оборудования для поддержания заданного температурного режима — актуально для хранения чувствительных к температуре товаров.</p>
     <div class="article-facts">
       <div class="article-fact">
         <div class="article-fact__num">150<em> кВт</em></div>
-        <div class="article-fact__label">максимальная мощность на блок</div>
+        <div class="article-fact__label" data-i18n="a2.fact1.label">максимальная мощность на блок</div>
       </div>
       <div class="article-fact">
         <div class="article-fact__num">24<em>/7</em></div>
-        <div class="article-fact__label">мониторинг инженерных систем</div>
+        <div class="article-fact__label" data-i18n="a2.fact2.label">мониторинг инженерных систем</div>
       </div>
       <div class="article-fact">
         <div class="article-fact__num">100<em>%</em></div>
-        <div class="article-fact__label">покрытие спринклерной системой</div>
+        <div class="article-fact__label" data-i18n="a2.fact3.label">покрытие спринклерной системой</div>
       </div>
     </div>
-
-    <h2>Интеграция с системами арендаторов</h2>
-
-    <p>
-      Инженерная инфраструктура спроектирована с учётом возможной интеграции с WMS-системами управления складом. Кабельные каналы и серверные ниши предусмотрены на этапе строительства. Волоконно-оптическая магистраль обеспечивает каждый блок высокоскоростным выделенным интернет-каналом с возможностью подключения к нескольким провайдерам.
-    </p>
-
-    <p>
-      Секционные ворота оснащены электроприводом с дистанционным управлением. Система контроля доступа поддерживает карточные и мобильные идентификаторы — арендаторы могут выдавать права доступа своим сотрудникам без участия администрации комплекса.
-    </p>
-
+    <h2 data-i18n="a2.h2.4">Интеграция с системами арендаторов</h2>
+    <p data-i18n="a2.p7">Инженерная инфраструктура спроектирована с учётом возможной интеграции с WMS-системами управления складом. Кабельные каналы и серверные ниши предусмотрены на этапе строительства. Волоконно-оптическая магистраль обеспечивает каждый блок высокоскоростным выделенным интернет-каналом с возможностью подключения к нескольким провайдерам.</p>
+    <p data-i18n="a2.p8">Секционные ворота оснащены электроприводом с дистанционным управлением. Система контроля доступа поддерживает карточные и мобильные идентификаторы — арендаторы могут выдавать права доступа своим сотрудникам без участия администрации комплекса.</p>
   </div>
 
-  <!-- ─── RELATED ARTICLES ─────────────────────────────── -->
   <div class="article-related">
     <div class="article-related__inner">
       <div class="article-related__top">
-        <h2 class="article-related__heading">Читайте также</h2>
-        <a href="news.html" class="article-related__all">Все новости →</a>
+        <h2 class="article-related__heading" data-i18n="art.related.heading">Читайте также</h2>
+        <a href="news.html" class="article-related__all" data-i18n="art.related.all">Все новости →</a>
       </div>
       <div class="article-related__grid">
         <a href="article-1.html" class="article-rel-card">
-          <div class="article-rel-card__cat">Развитие комплекса</div>
-          <div class="article-rel-card__title">Старт реализации первой очереди проекта</div>
+          <div class="article-rel-card__cat" data-i18n="a2.rel.c1.cat">Развитие комплекса</div>
+          <div class="article-rel-card__title" data-i18n="a2.rel.c1.title">Старт реализации первой очереди проекта</div>
           <div class="article-rel-card__date">06.06.2026</div>
         </a>
         <a href="article-3.html" class="article-rel-card">
-          <div class="article-rel-card__cat">Технологии</div>
-          <div class="article-rel-card__title">Энергоэффективность как основа комплекса</div>
+          <div class="article-rel-card__cat" data-i18n="a2.rel.c2.cat">Технологии</div>
+          <div class="article-rel-card__title" data-i18n="a2.rel.c2.title">Энергоэффективность как основа комплекса</div>
           <div class="article-rel-card__date">05.06.2026</div>
         </a>
         <a href="article-4.html" class="article-rel-card">
-          <div class="article-rel-card__cat">Логистика</div>
-          <div class="article-rel-card__title">Развитие транспортной инфраструктуры</div>
+          <div class="article-rel-card__cat" data-i18n="a2.rel.c3.cat">Логистика</div>
+          <div class="article-rel-card__title" data-i18n="a2.rel.c3.title">Развитие транспортной инфраструктуры</div>
           <div class="article-rel-card__date">04.06.2026</div>
         </a>
       </div>
@@ -145,41 +129,48 @@
   </div>
 </article>
 
-<!-- ═══════════════ FOOTER ════════════════════════════════ -->
 <footer class="site-footer">
-  <div class="footer-dots" aria-hidden="true">
-    <div class="footer-dots__line"></div>
-  </div>
+  <div class="footer-dots" aria-hidden="true"><div class="footer-dots__line"></div></div>
   <div class="site-footer__inner">
     <div class="site-footer__top">
-      <p class="site-footer__tagline">Современное складское пространство с гибкой модульной системой хранения</p>
+      <p class="site-footer__tagline" data-i18n="footer.tagline">Современное складское пространство с гибкой модульной системой хранения</p>
       <div class="site-footer__navs">
-        <nav class="site-footer__nav" aria-label="Разделы">
-          <a href="index.html#about">Комплекс</a>
-          <a href="news.html">Новости</a>
-          <a href="index.html#questions">Вопросы</a>
-          <a href="index.html#contacts">Контакты</a>
+        <nav class="site-footer__nav">
+          <a href="index.html#about" data-i18n="footer.nav.complex">Комплекс</a>
+          <a href="news.html" data-i18n="nav.news">Новости</a>
+          <a href="index.html#questions" data-i18n="faq.label2">Вопросы</a>
+          <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
         </nav>
-        <nav class="site-footer__nav site-footer__nav--wide" aria-label="Документы">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Согласие на обработку персональных данных</a>
-          <a href="#">Пользовательское соглашение</a>
+        <nav class="site-footer__nav site-footer__nav--wide">
+          <a href="#" data-i18n="footer.legal.privacy">Политика конфиденциальности</a>
+          <a href="#" data-i18n="footer.legal.personal">Согласие на обработку персональных данных</a>
+          <a href="#" data-i18n="footer.legal.terms">Пользовательское соглашение</a>
         </nav>
-        <nav class="site-footer__nav" aria-label="Платформы">
-          <a href="#">МАКС</a>
-          <a href="#">RuTube</a>
-        </nav>
+        <nav class="site-footer__nav"><a href="#">МАКС</a><a href="#">RuTube</a></nav>
       </div>
     </div>
     <div class="site-footer__logo-row">
       <img src="logo-footer.svg" alt="Smart Valley Zvartnots" class="site-footer__logo-img" width="907" height="262" loading="lazy" decoding="async">
     </div>
-    <p class="site-footer__copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copy" data-i18n="footer.copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
+      <p class="site-footer__made-by"><span data-i18n="footer.made">разработано</span> <a href="https://podpisait.ru/" target="_blank" rel="noopener noreferrer"><img src="podpisait-logo.svg" alt="подписайт" class="site-footer__made-by-img"></a></p>
+    </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<div id="cookie-banner" class="cookie-banner" role="dialog">
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text" data-i18n-html="cookie.text"><strong>Мы используем cookies</strong> Для корректной работы сайта мы используем файлы cookie. Продолжая использование сайта, вы соглашаетесь с <a href="#">политикой обработки данных</a>.</div>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__accept" id="cookie-accept" data-i18n="cookie.accept">Принять</button>
+      <button class="cookie-banner__decline" id="cookie-decline" data-i18n="cookie.decline">Отклонить</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>

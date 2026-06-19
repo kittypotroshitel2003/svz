@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Valley Zvartnots — Складские блоки нового поколения</title>
-  <meta name="description" content="Smart Valley Zvartnots — современный складской комплекс у аэропорта Звартноц, Армения. Модульные блоки, гибкая инфраструктура, международная логистика.">
+  <title data-i18n="meta.title">Smart Valley Zvartnots — Складские блоки нового поколения</title>
+  <meta name="description" data-i18n-meta-desc content="Smart Valley Zvartnots — современный складской комплекс у аэропорта Звартноц, Армения. Модульные блоки, гибкая инфраструктура, международная логистика.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,18 +38,23 @@
     <img src="logo-nav.svg" alt="Smart Valley Zvartnots" width="253" height="73">
   </a>
   <div class="nav__links">
-    <a href="#about">О комплексе</a>
-    <a href="#infrastructure">Инфраструктура</a>
-    <a href="news.html">Новости</a>
-    <a href="#contacts">Контакты</a>
+    <a href="#about" data-i18n="nav.about">О комплексе</a>
+    <a href="#infrastructure" data-i18n="nav.infra">Инфраструктура</a>
+    <a href="news.html" data-i18n="nav.news">Новости</a>
+    <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
   </div>
-  <a href="#contact-form" class="nav__cta">
+  <div class="nav__lang" id="nav-lang">
+    <button class="nav__lang-btn active" data-lang="ru">RU</button>
+    <button class="nav__lang-btn" data-lang="en">EN</button>
+    <button class="nav__lang-btn" data-lang="hy">HY</button>
+  </div>
+  <a href="#contact-form" class="nav__cta" data-i18n="nav.cta">
     Связаться
     <svg class="nav__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M7 17L17 7M17 7H7M17 7v10"/>
     </svg>
   </a>
-  <button class="nav__burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+  <button class="nav__burger" id="nav-burger" aria-label="Открыть меню" aria-expanded="false" data-i18n-aria="nav.burger.aria">
     <span></span>
     <span></span>
     <span></span>
@@ -59,27 +64,32 @@
 <!-- ═══ MOBILE MENU ══════════════════════════════════════════ -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <nav class="mobile-menu__nav">
-    <a href="#about" class="mobile-menu__link">
+    <a href="#about" class="mobile-menu__link" data-i18n="nav.about">
       О комплексе
       <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
     </a>
-    <a href="#infrastructure" class="mobile-menu__link">
+    <a href="#infrastructure" class="mobile-menu__link" data-i18n="nav.infra">
       Инфраструктура
       <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
     </a>
-    <a href="news.html" class="mobile-menu__link">
+    <a href="news.html" class="mobile-menu__link" data-i18n="nav.news">
       Новости
       <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
     </a>
-    <a href="#contacts" class="mobile-menu__link">
+    <a href="#contacts" class="mobile-menu__link" data-i18n="nav.contacts">
       Контакты
       <svg class="mobile-menu__link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
     </a>
   </nav>
-  <a href="#contact-form" class="mobile-menu__cta">
+  <a href="#contact-form" class="mobile-menu__cta" data-i18n="nav.cta">
     Связаться
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
   </a>
+  <div class="mobile-menu__lang">
+    <button class="nav__lang-btn active" data-lang="ru">RU</button>
+    <button class="nav__lang-btn" data-lang="en">EN</button>
+    <button class="nav__lang-btn" data-lang="hy">HY</button>
+  </div>
 </div>
 
 <!-- Global journey line — fixed, grows with scroll progress -->
@@ -92,7 +102,7 @@
   <div class="hero__bg" style="background-image:url('hero-image.jpg')"></div>
   <div class="hero__overlay"></div>
   <div class="hero__content">
-    <h1 class="hero__heading">Складские<br class="mob-br"> блоки нового<br class="mob-br"> поколения</h1>
+    <h1 class="hero__heading" data-i18n-html="hero.heading">Складские<br class="mob-br"> блоки нового<br class="mob-br"> поколения</h1>
   </div>
 </section>
 
@@ -101,14 +111,14 @@
   <div class="about__brow">
     <div class="section-label">
       <span class="section-label__dot"></span>
-      <span class="section-label__text">о компании</span>
+      <span class="section-label__text" data-i18n="about.label">о компании</span>
     </div>
   </div>
   <div class="about__body">
     <div class="about__logo reveal--left">
       <img src="logo-about.svg" alt="Smart Valley Zvartnots logo" width="863" height="250" loading="lazy" decoding="async">
     </div>
-    <p class="about__text reveal--right" style="transition-delay:0.12s">
+    <p class="about__text reveal--right" style="transition-delay:0.12s" data-i18n="about.text">
       — логистический комплекс международного уровня вблизи аэропорта Звартноц, объединяющий в себе стратегическую локацию, современные технологии и ESG-подход для эффективного развития бизнеса и международной торговли.
     </p>
   </div>
@@ -118,13 +128,13 @@
 <section class="infrastructure" id="infrastructure">
   <div class="section-label">
     <span class="section-label__dot"></span>
-    <span class="section-label__text">о комплексе</span>
+    <span class="section-label__text" data-i18n="infra.label">о комплексе</span>
   </div>
   <div class="infrastructure__header">
-    <h2 class="infrastructure__heading reveal">
+    <h2 class="infrastructure__heading reveal" data-i18n="infra.heading">
       Инфраструктура, которая адаптируется под ваш бизнес
     </h2>
-    <p class="infrastructure__desc reveal" style="transition-delay:0.2s">
+    <p class="infrastructure__desc reveal" style="transition-delay:0.2s" data-i18n="infra.desc">
       Smart Valley Zvartnots — современный складской комплекс с модульной системой блоков, гибкой внутренней структурой, инженерными системами, безопасностью и возможностью адаптации помещений под задачи арендаторов.
     </p>
   </div>
@@ -135,29 +145,28 @@
       <div class="infra-card" data-side="left" data-delay="0" data-popup="modular" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-office.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Модульные блоки</div>
-          <div class="infra-card__text">Отдельные складские блоки для арендаторов со своим входом и готовой инфраструктурой.</div>
+          <div class="infra-card__title" data-i18n="card.modular.title">Модульные блоки</div>
+          <div class="infra-card__text" data-i18n="card.modular.text">Отдельные складские блоки для арендаторов со своим входом и готовой инфраструктурой.</div>
         </div>
       </div>
       <div class="infra-card" data-side="left" data-delay="1" data-popup="docks" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-truck.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Доки двух типов</div>
-          <div class="infra-card__text">Доки для еврофур, а также для малого и среднего коммерческого транспорта.</div>
+          <div class="infra-card__title" data-i18n="card.docks.title">Доки двух типов</div>
+          <div class="infra-card__text" data-i18n="card.docks.text">Доки для еврофур, а также для малого и среднего коммерческого транспорта.</div>
         </div>
       </div>
       <div class="infra-card" data-side="left" data-delay="2" data-popup="flexible" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-package.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Гибкое пространство</div>
-          <div class="infra-card__text">Офисные зоны, антресоли и дополнительные площади внутри складского блока.</div>
+          <div class="infra-card__title" data-i18n="card.flexible.title">Гибкое пространство</div>
+          <div class="infra-card__text" data-i18n="card.flexible.text">Офисные зоны, антресоли и дополнительные площади внутри складского блока.</div>
         </div>
       </div>
     </div>
 
     <!-- WAREHOUSE SCENE -->
     <div class="warehouse-scene" id="warehouse-scene">
-      <!-- Корпус склада (всегда виден) -->
       <div class="warehouse-body">
         <picture>
           <source media="(max-width: 640px)" srcset="warehouse-background-mobile.webp" type="image/webp">
@@ -165,7 +174,6 @@
           <img src="warehouse-background.png" alt="Склад Smart Valley Zvartnots" loading="lazy" decoding="async">
         </picture>
       </div>
-      <!-- Крыша (начальное: закрыто; анимируется вверх при скролле) -->
       <div class="warehouse-roof" id="warehouse-roof">
         <picture>
           <source media="(max-width: 640px)" srcset="warehouse-roof-mobile.webp" type="image/webp">
@@ -180,22 +188,22 @@
       <div class="infra-card" data-side="right" data-delay="0" data-popup="security" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-security.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Современная безопасность</div>
-          <div class="infra-card__text">Ограждение, КПП, охрана и доступ к складским блокам 24/7.</div>
+          <div class="infra-card__title" data-i18n="card.security.title">Современная безопасность</div>
+          <div class="infra-card__text" data-i18n="card.security.text">Ограждение, КПП, охрана и доступ к складским блокам 24/7.</div>
         </div>
       </div>
       <div class="infra-card" data-side="right" data-delay="1" data-popup="engineering" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-engineering.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Инженерные системы</div>
-          <div class="infra-card__text">Спринклерное пожаротушение с возможностью локального срабатывания.</div>
+          <div class="infra-card__title" data-i18n="card.engineering.title">Инженерные системы</div>
+          <div class="infra-card__text" data-i18n="card.engineering.text">Спринклерное пожаротушение с возможностью локального срабатывания.</div>
         </div>
       </div>
       <div class="infra-card" data-side="right" data-delay="2" data-popup="energy" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="infra-card__icon"><img src="icon-energy.svg" alt="" loading="lazy" decoding="async"></div>
         <div class="infra-card__body">
-          <div class="infra-card__title">Энергоэффективность</div>
-          <div class="infra-card__text">Солнечные панели, автоматизация обслуживания и снижение эксплуатационных затрат.</div>
+          <div class="infra-card__title" data-i18n="card.energy.title">Энергоэффективность</div>
+          <div class="infra-card__text" data-i18n="card.energy.text">Солнечные панели, автоматизация обслуживания и снижение эксплуатационных затрат.</div>
         </div>
       </div>
     </div>
@@ -209,159 +217,159 @@
   <section class="faq" id="questions">
     <div class="section-label section-label--light" style="margin-bottom:32px">
       <span class="section-label__dot"></span>
-      <span class="section-label__text">вопросы</span>
+      <span class="section-label__text" data-i18n="faq.label">вопросы</span>
     </div>
 
     <div class="faq__header">
-      <h2 class="faq__heading reveal" style="--reveal-color:white">Перед тем как выбрать складской блок</h2>
-      <p class="faq__desc reveal" style="transition-delay:0.1s">Здесь собраны ответы на ключевые вопросы об аренде, инфраструктуре и возможностях Smart Valley Zvartnots.</p>
+      <h2 class="faq__heading reveal" style="--reveal-color:white" data-i18n="faq.heading">Перед тем как выбрать складской блок</h2>
+      <p class="faq__desc reveal" style="transition-delay:0.1s" data-i18n="faq.desc">Здесь собраны ответы на ключевые вопросы об аренде, инфраструктуре и возможностях Smart Valley Zvartnots.</p>
     </div>
 
     <div class="faq__body">
       <div class="faq__left">
         <div class="faq__tabs">
-          <div class="faq__tab active" data-cat="all">Общее</div>
-          <div class="faq__tab" data-cat="lease">Аренда и условия</div>
-          <div class="faq__tab" data-cat="infra">Инфраструктура</div>
-          <div class="faq__tab" data-cat="tech">Технологии и оснащение</div>
+          <div class="faq__tab active" data-cat="all" data-i18n="faq.tab.all">Общее</div>
+          <div class="faq__tab" data-cat="lease" data-i18n="faq.tab.lease">Аренда и условия</div>
+          <div class="faq__tab" data-cat="infra" data-i18n="faq.tab.infra">Инфраструктура</div>
+          <div class="faq__tab" data-cat="tech" data-i18n="faq.tab.tech">Технологии и оснащение</div>
         </div>
         <div class="faq__contact">
-          <div class="faq__contact-title">Остались вопросы?</div>
-          <div class="faq__contact-text">Наша команда готова помочь вам с выбором.<br><br><a href="#contact-form" class="faq__contact-link">Связаться с нами →</a></div>
+          <div class="faq__contact-title" data-i18n="faq.contact.title">Остались вопросы?</div>
+          <div class="faq__contact-text" data-i18n-html="faq.contact.text">Наша команда готова помочь вам с выбором.<br><br><a href="#contact-form" class="faq__contact-link">Связаться с нами →</a></div>
         </div>
       </div>
 
       <div class="faq__right">
       <div class="faq__item open" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Какие складские блоки доступны арендаторам?</span>
+          <span class="faq__question-text" data-i18n="faq.q1">Какие складские блоки доступны арендаторам?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Складской комплекс состоит из модульных блоков, которые могут использоваться как самостоятельные пространства с отдельным входом, зонами доступа и собственной инфраструктурой. Внутри блока могут быть организованы складские, офисные и дополнительные функциональные зоны.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a1">Складской комплекс состоит из модульных блоков, которые могут использоваться как самостоятельные пространства с отдельным входом, зонами доступа и собственной инфраструктурой. Внутри блока могут быть организованы складские, офисные и дополнительные функциональные зоны.</div>
         </div>
       </div>
       <div class="faq__item" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Как проходит процесс выбора складского блока?</span>
+          <span class="faq__question-text" data-i18n="faq.q2">Как проходит процесс выбора складского блока?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Наш менеджер проводит консультацию, уточняет требования к площади и логистике, после чего предлагает оптимальный вариант из доступных блоков. Осмотр объекта возможен как очно, так и онлайн.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a2">Наш менеджер проводит консультацию, уточняет требования к площади и логистике, после чего предлагает оптимальный вариант из доступных блоков. Осмотр объекта возможен как очно, так и онлайн.</div>
         </div>
       </div>
       <div class="faq__item" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Можно ли посмотреть объект до принятия решения?</span>
+          <span class="faq__question-text" data-i18n="faq.q3">Можно ли посмотреть объект до принятия решения?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Да, мы организуем ознакомительный визит на территорию комплекса для всех потенциальных арендаторов. Запись — через форму на сайте или по телефону.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a3">Да, мы организуем ознакомительный визит на территорию комплекса для всех потенциальных арендаторов. Запись — через форму на сайте или по телефону.</div>
         </div>
       </div>
       <div class="faq__item" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Можно ли объединить склад и офис в одном помещении?</span>
+          <span class="faq__question-text" data-i18n="faq.q4">Можно ли объединить склад и офис в одном помещении?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Да, блоки поддерживают антресольные зоны, отдельные офисные помещения и дополнительные площади. Планировка согласовывается индивидуально под задачи арендатора.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a4">Да, блоки поддерживают антресольные зоны, отдельные офисные помещения и дополнительные площади. Планировка согласовывается индивидуально под задачи арендатора.</div>
         </div>
       </div>
       <div class="faq__item" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Подойдёт ли комплекс для растущего бизнеса?</span>
+          <span class="faq__question-text" data-i18n="faq.q5">Подойдёт ли комплекс для растущего бизнеса?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Модульная структура позволяет расширять арендуемую площадь без переезда — просто добавляя смежные блоки по мере роста потребностей бизнеса.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a5">Модульная структура позволяет расширять арендуемую площадь без переезда — просто добавляя смежные блоки по мере роста потребностей бизнеса.</div>
         </div>
       </div>
       <div class="faq__item" data-cat="all">
         <div class="faq__question">
-          <span class="faq__question-text">Кто поможет подобрать подходящий формат?</span>
+          <span class="faq__question-text" data-i18n="faq.q6">Кто поможет подобрать подходящий формат?</span>
           <span class="faq__toggle"></span>
         </div>
         <div class="faq__answer">
-          <div class="faq__answer-inner">Наш отдел аренды — leasing@smartvalley.am. Специалисты проконсультируют по всем форматам и помогут найти оптимальное решение.</div>
+          <div class="faq__answer-inner" data-i18n="faq.a6">Наш отдел аренды — leasing@smartvalley.am. Специалисты проконсультируют по всем форматам и помогут найти оптимальное решение.</div>
         </div>
       </div>
       <!-- ── Аренда и условия ─────────────────────────────── -->
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Какой минимальный срок аренды?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Минимальный срок аренды составляет 12 месяцев. Для долгосрочного сотрудничества предусмотрены специальные условия и фиксированные ставки на весь период договора.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q7">Какой минимальный срок аренды?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a7">Минимальный срок аренды составляет 12 месяцев. Для долгосрочного сотрудничества предусмотрены специальные условия и фиксированные ставки на весь период договора.</div></div>
       </div>
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Входят ли коммунальные услуги в арендную ставку?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Электроснабжение, теплоснабжение и водоснабжение оплачиваются отдельно по фактическому потреблению. Охрана и обслуживание общей территории включены в базовую ставку.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q8">Входят ли коммунальные услуги в арендную ставку?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a8">Электроснабжение, теплоснабжение и водоснабжение оплачиваются отдельно по фактическому потреблению. Охрана и обслуживание общей территории включены в базовую ставку.</div></div>
       </div>
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Предусмотрена ли индексация арендной ставки?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Условия индексации фиксируются в договоре аренды. Ставка пересматривается не чаще одного раза в год по заранее согласованному коэффициенту.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q9">Предусмотрена ли индексация арендной ставки?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a9">Условия индексации фиксируются в договоре аренды. Ставка пересматривается не чаще одного раза в год по заранее согласованному коэффициенту.</div></div>
       </div>
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Можно ли арендовать несколько блоков одновременно?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Да, предусмотрены групповые условия для арендаторов, занимающих более одного блока. Размер скидки обсуждается индивидуально в зависимости от объёма площади и срока договора.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q10">Можно ли арендовать несколько блоков одновременно?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a10">Да, предусмотрены групповые условия для арендаторов, занимающих более одного блока. Размер скидки обсуждается индивидуально в зависимости от объёма площади и срока договора.</div></div>
       </div>
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Каков порядок внесения обеспечительного депозита?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Депозит составляет 1–2 месячных платежа и возвращается по истечении договора при отсутствии задолженностей и повреждений имущества.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q11">Каков порядок внесения обеспечительного депозита?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a11">Депозит составляет 1–2 месячных платежа и возвращается по истечении договора при отсутствии задолженностей и повреждений имущества.</div></div>
       </div>
       <div class="faq__item" data-cat="lease" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Какие документы нужны для заключения договора?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Для юридических лиц: свидетельство о регистрации, устав, паспорт руководителя. Для ИП: паспорт и свидетельство о регистрации. Менеджер уточнит полный пакет при первичном обращении.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q12">Какие документы нужны для заключения договора?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a12">Для юридических лиц: свидетельство о регистрации, устав, паспорт руководителя. Для ИП: паспорт и свидетельство о регистрации. Менеджер уточнит полный пакет при первичном обращении.</div></div>
       </div>
 
       <!-- ── Инфраструктура ───────────────────────────────── -->
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Какова высота потолков в складских блоках?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Стандартная высота до подкровельных конструкций — 8–12 метров в зависимости от типа блока. Это позволяет использовать стеллажное хранение до 5–6 ярусов.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q13">Какова высота потолков в складских блоках?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a13">Стандартная высота до подкровельных конструкций — 8–12 метров в зависимости от типа блока. Это позволяет использовать стеллажное хранение до 5–6 ярусов.</div></div>
       </div>
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Есть ли зоны погрузки и разгрузки?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">На территории предусмотрены грузовые доки, рампы и крытые зоны погрузки. Количество ворот на блок согласовывается при планировании пространства.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q14">Есть ли зоны погрузки и разгрузки?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a14">На территории предусмотрены грузовые доки, рампы и крытые зоны погрузки. Количество ворот на блок согласовывается при планировании пространства.</div></div>
       </div>
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Как организована безопасность периметра?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Периметр оборудован видеонаблюдением, системой контроля доступа и круглосуточной охраной КПП. Возможна интеграция с собственными системами безопасности арендатора.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q15">Как организована безопасность периметра?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a15">Периметр оборудован видеонаблюдением, системой контроля доступа и круглосуточной охраной КПП. Возможна интеграция с собственными системами безопасности арендатора.</div></div>
       </div>
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Какое электроснабжение предусмотрено в блоках?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Каждый блок подключён к выделенной электрической линии. Базовая мощность — 50 кВт, расширение до 150 кВт по запросу. Предусмотрено резервное питание для критических потребителей.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q16">Какое электроснабжение предусмотрено в блоках?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a16">Каждый блок подключён к выделенной электрической линии. Базовая мощность — 50 кВт, расширение до 150 кВт по запросу. Предусмотрено резервное питание для критических потребителей.</div></div>
       </div>
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Есть ли парковка для грузовых автомобилей?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Территория включает парковочные зоны для грузовиков (в том числе фур) и легковых автомобилей. Грузовые маршруты полностью отделены от пешеходных зон.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q17">Есть ли парковка для грузовых автомобилей?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a17">Территория включает парковочные зоны для грузовиков (в том числе фур) и легковых автомобилей. Грузовые маршруты полностью отделены от пешеходных зон.</div></div>
       </div>
       <div class="faq__item" data-cat="infra" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Как организованы отопление и вентиляция?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Блоки оснащены системой центрального отопления и принудительной вентиляцией. По запросу возможна установка климатического оборудования для поддержания заданного температурного режима хранения.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q18">Как организованы отопление и вентиляция?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a18">Блоки оснащены системой центрального отопления и принудительной вентиляцией. По запросу возможна установка климатического оборудования для поддержания заданного температурного режима хранения.</div></div>
       </div>
 
       <!-- ── Технологии и оснащение ─────────────────────── -->
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Поддерживается ли интеграция с WMS-системами?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Инженерные сети подготовлены для подключения систем управления складом (WMS). Кабельные каналы и серверные ниши предусмотрены на этапе строительства блока.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q19">Поддерживается ли интеграция с WMS-системами?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a19">Инженерные сети подготовлены для подключения систем управления складом (WMS). Кабельные каналы и серверные ниши предусмотрены на этапе строительства блока.</div></div>
       </div>
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Есть ли высокоскоростной интернет на территории?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Комплекс обеспечен волоконно-оптической магистралью. Каждый блок получает выделенный канал; возможно подключение к нескольким провайдерам для резервирования.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q20">Есть ли высокоскоростной интернет на территории?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a20">Комплекс обеспечен волоконно-оптической магистралью. Каждый блок получает выделенный канал; возможно подключение к нескольким провайдерам для резервирования.</div></div>
       </div>
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Можно ли установить собственное оборудование?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Да, арендатор вправе монтировать собственное оборудование при соблюдении технических регламентов. Допустимые нагрузки на перекрытия и вводные параметры сетей уточняются при согласовании.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q21">Можно ли установить собственное оборудование?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a21">Да, арендатор вправе монтировать собственное оборудование при соблюдении технических регламентов. Допустимые нагрузки на перекрытия и вводные параметры сетей уточняются при согласовании.</div></div>
       </div>
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Используется ли энергоэффективное освещение?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Блоки оснащены LED-освещением с датчиками движения и системой управления освещённостью. Солнечные панели на кровле снижают общую нагрузку на электросеть комплекса.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q22">Используется ли энергоэффективное освещение?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a22">Блоки оснащены LED-освещением с датчиками движения и системой управления освещённостью. Солнечные панели на кровле снижают общую нагрузку на электросеть комплекса.</div></div>
       </div>
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Можно ли оборудовать блок холодильными камерами?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Технически возможно в блоках с соответствующими нагрузками и электрической мощностью. Решение согласовывается с технической службой комплекса.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q23">Можно ли оборудовать блок холодильными камерами?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a23">Технически возможно в блоках с соответствующими нагрузками и электрической мощностью. Решение согласовывается с технической службой комплекса.</div></div>
       </div>
       <div class="faq__item" data-cat="tech" style="display:none">
-        <div class="faq__question"><span class="faq__question-text">Автоматизированы ли ворота и системы доступа?</span><span class="faq__toggle"></span></div>
-        <div class="faq__answer"><div class="faq__answer-inner">Секционные ворота оснащены электроприводом с дистанционным управлением. Система контроля доступа поддерживает карточные и мобильные идентификаторы.</div></div>
+        <div class="faq__question"><span class="faq__question-text" data-i18n="faq.q24">Автоматизированы ли ворота и системы доступа?</span><span class="faq__toggle"></span></div>
+        <div class="faq__answer"><div class="faq__answer-inner" data-i18n="faq.a24">Секционные ворота оснащены электроприводом с дистанционным управлением. Система контроля доступа поддерживает карточные и мобильные идентификаторы.</div></div>
       </div>
 
     </div><!-- /.faq__right -->
@@ -374,16 +382,16 @@
       <div>
         <div class="section-label section-label--light" style="margin-bottom:24px">
           <span class="section-label__dot"></span>
-          <span class="section-label__text">новости</span>
+          <span class="section-label__text" data-i18n="news.label">новости</span>
         </div>
-        <h2 class="news__heading reveal">Новости Smart Valley Zvartnots</h2>
+        <h2 class="news__heading reveal" data-i18n="news.heading">Новости Smart Valley Zvartnots</h2>
       </div>
-      <p class="news__desc reveal" style="transition-delay:0.15s">Следите за развитием комплекса, новыми этапами строительства, запуском инфраструктуры и событиями, связанными с развитием складского хаба.</p>
+      <p class="news__desc reveal" style="transition-delay:0.15s" data-i18n="news.desc">Следите за развитием комплекса, новыми этапами строительства, запуском инфраструктуры и событиями, связанными с развитием складского хаба.</p>
     </div>
 
     <div class="news__grid">
 
-      <!-- Card 1: Large left (spans 2 rows) -->
+      <!-- Card 1 -->
       <a href="article-1.html" class="news-card news-card--large">
         <div class="news-card__photo-wrap">
           <video class="news-card__img" autoplay muted loop playsinline preload="none">
@@ -391,35 +399,35 @@
           </video>
           <div class="news-card__overlay"></div>
         </div>
-        <span class="news-card__label">Развитие комплекса</span>
+        <span class="news-card__label" data-i18n="news.c1.label">Развитие комплекса</span>
         <div class="news-card__body">
           <span class="news-card__date">06.06.2026</span>
-          <h3 class="news-card__title">Старт реализации первой очереди проекта</h3>
-          <p class="news-card__text">Подготовительные работы на территории комплекса завершены. Проект переходит к следующему этапу строительства складской инфраструктуры.</p>
+          <h3 class="news-card__title" data-i18n="news.c1.title">Старт реализации первой очереди проекта</h3>
+          <p class="news-card__text" data-i18n="news.c1.text">Подготовительные работы на территории комплекса завершены. Проект переходит к следующему этапу строительства складской инфраструктуры.</p>
           <span class="news-card__link">
-            Читать новость
+            <span data-i18n="news.readmore">Читать новость</span>
             <svg class="news-card__link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </span>
         </div>
       </a>
 
-      <!-- Card 2: Middle top (frosted text card) -->
+      <!-- Card 2 -->
       <a href="article-2.html" class="news-card news-card--text">
         <div class="news-card__body news-card__body--text">
           <div class="news-card__text-header">
-            <span class="news-card__label">Инфраструктура</span>
+            <span class="news-card__label" data-i18n="news.c2.label">Инфраструктура</span>
             <span class="news-card__date">06.06.2026</span>
           </div>
-          <h3 class="news-card__title">Продолжается развитие инженерных систем</h3>
-          <p class="news-card__text">В рамках проекта ведётся развитие инженерной системы комплекса с акцентом на снижение эксплуатационных затрат.</p>
+          <h3 class="news-card__title" data-i18n="news.c2.title">Продолжается развитие инженерных систем</h3>
+          <p class="news-card__text" data-i18n="news.c2.text">В рамках проекта ведётся развитие инженерной системы комплекса с акцентом на снижение эксплуатационных затрат.</p>
           <span class="news-card__link">
-            Читать новость
+            <span data-i18n="news.readmore">Читать новость</span>
             <svg class="news-card__link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
           </span>
         </div>
       </a>
 
-      <!-- Card 3: Middle bottom (energy photo) -->
+      <!-- Card 3 -->
       <a href="article-3.html" class="news-card news-card--photo">
         <div class="news-card__photo-wrap">
           <video class="news-card__img" autoplay muted loop playsinline preload="none">
@@ -427,13 +435,13 @@
           </video>
           <div class="news-card__overlay"></div>
           <div class="news-card__photo-caption">
-            <h3 class="news-card__title">Энергоэффективность</h3>
-            <p class="news-card__text--small">Проектирование энергоэффективной инфраструктуры</p>
+            <h3 class="news-card__title" data-i18n="news.c3.title">Энергоэффективность</h3>
+            <p class="news-card__text--small" data-i18n="news.c3.text">Проектирование энергоэффективной инфраструктуры</p>
           </div>
         </div>
       </a>
 
-      <!-- Card 4: TICKER CARD — бегущая строка внутри карточки -->
+      <!-- Card 4 ticker -->
       <a href="article-4.html" class="news-card news-card--ticker">
         <div class="news-card__photo-wrap">
           <video class="news-card__img" autoplay muted loop playsinline preload="none">
@@ -442,35 +450,33 @@
           <div class="news-card__overlay news-card__overlay--ticker"></div>
         </div>
         <div class="news-card__ticker-top">
-          <span class="news-card__label">Развитие транспортной инфраструктуры</span>
+          <span class="news-card__label" data-i18n="news.c4.label">Развитие транспортной инфраструктуры</span>
         </div>
         <div class="news-card__ticker-bottom">
-          <!-- Row 1 →  E-commerce · Дистрибуция · Логистика -->
           <div class="news-ticker" aria-hidden="true">
             <div class="news-ticker__track">
               <div class="tag-pill tag-pill--ecommerce"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>E-commerce</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>Дистрибуция</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>Логистика</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span><span data-i18n="ticker.dist">Дистрибуция</span></div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><span data-i18n="ticker.log">Логистика</span></div>
               <div class="tag-pill tag-pill--ecommerce"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>E-commerce</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>Дистрибуция</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>Логистика</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span><span data-i18n="ticker.dist">Дистрибуция</span></div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><span data-i18n="ticker.log">Логистика</span></div>
             </div>
           </div>
-          <!-- Row 2 ← Производство · Масштабирование (scrolls right) -->
           <div class="news-ticker" aria-hidden="true">
             <div class="news-ticker__track news-ticker__track--reverse">
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span>Производство</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>Масштабирование</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span>Производство</div>
-              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>Масштабирование</div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span><span data-i18n="ticker.mfg">Производство</span></div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span><span data-i18n="ticker.scale">Масштабирование</span></div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span><span data-i18n="ticker.mfg">Производство</span></div>
+              <div class="tag-pill"><span class="tag-pill__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span><span data-i18n="ticker.scale">Масштабирование</span></div>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- Card 5: "Read all" CTA -->
+      <!-- Card 5 CTA -->
       <a href="news.html" class="news-card news-card--cta">
-        <span class="news-cta__text">Читать все новости</span>
+        <span class="news-cta__text" data-i18n="news.all">Читать все новости</span>
         <svg class="news-cta__arrow" viewBox="0 0 58 58" fill="none">
           <path d="M41.0833 16.917L14.5 43.5003" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           <path d="M19.3334 14.5H42.5C42.9714 14.5 43.2071 14.5 43.3536 14.6464C43.5 14.7929 43.5 15.0286 43.5 15.5V38.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -485,33 +491,33 @@
 <section class="contacts" id="contacts">
   <div class="section-label">
     <span class="section-label__dot"></span>
-    <span class="section-label__text">контакты</span>
+    <span class="section-label__text" data-i18n="contacts.label">контакты</span>
   </div>
-  <h2 class="contacts__heading reveal">Контактная информация</h2>
+  <h2 class="contacts__heading reveal" data-i18n="contacts.heading">Контактная информация</h2>
   <div class="contacts__layout">
-    <div class="contacts__globe-wrap reveal">
+    <div class="contacts__globe-wrap">
       <div id="map"></div>
     </div>
     <div class="contacts__info reveal" style="transition-delay:0.2s">
       <div class="contact-block">
-        <div class="contact-block__label">Адрес</div>
-        <div class="contact-block__value">Район международного аэропорта «Звартноц»<br>Армения</div>
+        <div class="contact-block__label" data-i18n="contact.address.label">Адрес</div>
+        <div class="contact-block__value" data-i18n-html="contact.address.value">Район международного аэропорта «Звартноц»<br>Армения</div>
       </div>
       <div class="contact-block">
-        <div class="contact-block__label">Телефон</div>
+        <div class="contact-block__label" data-i18n="contact.phone.label">Телефон</div>
         <div class="contact-block__value">+374 XX XXX XXX</div>
       </div>
       <div class="contact-block">
-        <div class="contact-block__label">E-mail</div>
+        <div class="contact-block__label" data-i18n="contact.email.label">E-mail</div>
         <div class="contact-block__value">info@smartvalley.am</div>
       </div>
       <div class="contact-block">
-        <div class="contact-block__label">Отдел аренды</div>
+        <div class="contact-block__label" data-i18n="contact.leasing.label">Отдел аренды</div>
         <div class="contact-block__value">leasing@smartvalley.am</div>
       </div>
       <div class="contact-block">
-        <div class="contact-block__label">Режим работы</div>
-        <div class="contact-block__value">Понедельник — Пятница<br>09:00 — 18:00</div>
+        <div class="contact-block__label" data-i18n="contact.hours.label">Режим работы</div>
+        <div class="contact-block__value" data-i18n-html="contact.hours.value">Понедельник — Пятница<br>09:00 — 18:00</div>
       </div>
     </div>
   </div>
@@ -521,33 +527,33 @@
 <section class="contact-form-section" id="contact-form">
   <div class="section-label" style="margin-bottom:40px">
     <span class="section-label__dot"></span>
-    <span class="section-label__text">заказать звонок</span>
+    <span class="section-label__text" data-i18n="form.label">заказать звонок</span>
   </div>
   <div class="form__header">
-    <h2 class="form__heading reveal">Получите предложение под задачи вашего бизнеса</h2>
-    <p class="form__desc reveal" style="transition-delay:0.1s">Расскажите о требованиях к площади, логистике и организации хранения — мы подготовим решение, соответствующее вашим операционным задачам.</p>
+    <h2 class="form__heading reveal" data-i18n="form.heading">Получите предложение под задачи вашего бизнеса</h2>
+    <p class="form__desc reveal" style="transition-delay:0.1s" data-i18n="form.desc">Расскажите о требованиях к площади, логистике и организации хранения — мы подготовим решение, соответствующее вашим операционным задачам.</p>
   </div>
   <form class="form__body" id="form-main" novalidate>
     <div class="reveal" style="transition-delay:0.2s">
       <div class="form__fields">
         <div class="form__field-wrap">
-          <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="given-name" aria-label="Ваше имя">
-          <div class="form__error">Пожалуйста, введите ваше имя</div>
+          <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="given-name" aria-label="Ваше имя" data-i18n-placeholder="form.name">
+          <div class="form__error" data-i18n="form.err.name">Пожалуйста, введите ваше имя</div>
         </div>
         <div class="form__field-wrap">
-          <input class="form__input" type="text" name="company" placeholder="Компания" autocomplete="organization" aria-label="Название компании">
-          <div class="form__error">Пожалуйста, введите название компании</div>
+          <input class="form__input" type="text" name="company" placeholder="Компания" autocomplete="organization" aria-label="Название компании" data-i18n-placeholder="form.company">
+          <div class="form__error" data-i18n="form.err.company">Пожалуйста, введите название компании</div>
         </div>
         <div class="form__field-wrap">
-          <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" aria-label="Номер телефона">
-          <div class="form__error">Введите корректный номер телефона</div>
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" aria-label="Номер телефона" data-i18n-placeholder="form.phone">
+          <div class="form__error" data-i18n="form.err.phone">Введите корректный номер телефона</div>
         </div>
       </div>
       <button class="form__submit" type="submit">
-        Отправить
+        <span data-i18n="form.submit">Отправить</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </button>
-      <p class="form__legal">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
+      <p class="form__legal" data-i18n="form.legal">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
     </div>
     <div class="form__right reveal" style="transition-delay:0.15s">
       <picture>
@@ -564,20 +570,19 @@
     <div class="footer-dots__line"></div>
   </div>
   <div class="site-footer__inner">
-
     <div class="site-footer__top">
-      <p class="site-footer__tagline">Современное складское пространство с гибкой модульной системой хранения</p>
+      <p class="site-footer__tagline" data-i18n="footer.tagline">Современное складское пространство с гибкой модульной системой хранения</p>
       <div class="site-footer__navs">
         <nav class="site-footer__nav" aria-label="Разделы">
-          <a href="#about">Комплекс</a>
-          <a href="news.html">Новости</a>
-          <a href="#questions">Вопросы</a>
-          <a href="#contacts">Контакты</a>
+          <a href="#about" data-i18n="footer.nav.complex">Комплекс</a>
+          <a href="news.html" data-i18n="nav.news">Новости</a>
+          <a href="#questions" data-i18n="faq.label2">Вопросы</a>
+          <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
         </nav>
         <nav class="site-footer__nav site-footer__nav--wide" aria-label="Документы">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Согласие на обработку персональных данных</a>
-          <a href="#">Пользовательское соглашение</a>
+          <a href="#" data-i18n="footer.legal.privacy">Политика конфиденциальности</a>
+          <a href="#" data-i18n="footer.legal.personal">Согласие на обработку персональных данных</a>
+          <a href="#" data-i18n="footer.legal.terms">Пользовательское соглашение</a>
         </nav>
         <nav class="site-footer__nav" aria-label="Платформы">
           <a href="#">МАКС</a>
@@ -585,23 +590,20 @@
         </nav>
       </div>
     </div>
-
     <div class="site-footer__logo-row">
       <img src="logo-footer.svg" alt="Smart Valley Zvartnots" class="site-footer__logo-img" width="907" height="262" loading="lazy" decoding="async">
     </div>
-
     <div class="site-footer__bottom">
-      <p class="site-footer__copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
-      <p class="site-footer__made-by">разработано <a href="https://podpisait.ru/" target="_blank" rel="noopener noreferrer"><img src="podpisait-logo.svg" alt="подписайт" class="site-footer__made-by-img"></a></p>
+      <p class="site-footer__copy" data-i18n="footer.copy">2026, Smart Valley Zvartnots. Все права защищены.</p>
+      <p class="site-footer__made-by"><span data-i18n="footer.made">разработано</span> <a href="https://podpisait.ru/" target="_blank" rel="noopener noreferrer"><img src="podpisait-logo.svg" alt="подписайт" class="site-footer__made-by-img"></a></p>
     </div>
-
   </div>
 </footer>
 
 <!-- ═══ INFRA POPUP ══════════════════════════════════════════ -->
 <div id="infra-popup-overlay" class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="popup-title-el">
   <div class="popup" id="infra-popup">
-    <button class="popup__close" id="popup-close" aria-label="Закрыть">
+    <button class="popup__close" id="popup-close" aria-label="Закрыть" data-i18n-aria="popup.close">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
         <path d="M1.5 1.5L16.5 16.5M16.5 1.5L1.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
@@ -612,7 +614,7 @@
     <div class="popup__content" id="popup-content-el">
       <h2 class="popup__title" id="popup-title-el"></h2>
       <p class="popup__desc" id="popup-desc-el"></p>
-      <p class="popup__features-label">Что включает</p>
+      <p class="popup__features-label" data-i18n="popup.features.label">Что включает</p>
       <div class="popup__features" id="popup-features-el"></div>
     </div>
   </div>
@@ -621,7 +623,7 @@
 <!-- ═══ SUCCESS POPUP ════════════════════════════════════════ -->
 <div id="form-success-overlay" class="success-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="success-popup-title">
   <div class="success-popup">
-    <button class="success-popup__close" id="success-popup-close" aria-label="Закрыть">
+    <button class="success-popup__close" id="success-popup-close" aria-label="Закрыть" data-i18n-aria="popup.close">
       <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
         <path d="M1.5 1.5L16.5 16.5M16.5 1.5L1.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
@@ -631,22 +633,22 @@
         <polyline points="20 6 9 17 4 12"/>
       </svg>
     </div>
-    <h2 class="success-popup__title" id="success-popup-title">Заявка отправлена</h2>
-    <p class="success-popup__desc">Наш менеджер свяжется с вами в течение рабочего дня. Спасибо за интерес к Smart Valley Zvartnots.</p>
-    <button class="success-popup__btn" id="success-popup-ok">Отлично</button>
+    <h2 class="success-popup__title" id="success-popup-title" data-i18n="success.title">Заявка отправлена</h2>
+    <p class="success-popup__desc" data-i18n="success.desc">Наш менеджер свяжется с вами в течение рабочего дня. Спасибо за интерес к Smart Valley Zvartnots.</p>
+    <button class="success-popup__btn" id="success-popup-ok" data-i18n="success.btn">Отлично</button>
   </div>
 </div>
 
 <!-- ═══ COOKIE BANNER ══════════════════════════════════════ -->
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Уведомление о cookies">
   <div class="cookie-banner__inner">
-    <div class="cookie-banner__text">
+    <div class="cookie-banner__text" data-i18n-html="cookie.text">
       <strong>Мы используем cookies</strong>
       Для корректной работы сайта и улучшения вашего опыта мы используем файлы cookie. Продолжая использование сайта, вы соглашаетесь с <a href="#">политикой обработки данных</a>.
     </div>
     <div class="cookie-banner__actions">
-      <button class="cookie-banner__accept" id="cookie-accept">Принять</button>
-      <button class="cookie-banner__decline" id="cookie-decline">Отклонить</button>
+      <button class="cookie-banner__accept" id="cookie-accept" data-i18n="cookie.accept">Принять</button>
+      <button class="cookie-banner__decline" id="cookie-decline" data-i18n="cookie.decline">Отклонить</button>
     </div>
   </div>
 </div>
