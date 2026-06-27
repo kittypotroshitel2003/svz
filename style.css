@@ -1161,13 +1161,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   transform: none;
 }
 
-/* Contact section divider */
-.contact-divider {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  margin: 12px 20px;
-}
-
 /* Contact block hover accent */
 .contact-block {
   padding-left: 20px;
@@ -1175,6 +1168,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   transition: border-color 0.3s ease;
 }
 .contact-block:hover { border-color: var(--accent); }
+.contact-block--sep { margin-bottom: 24px; }
 
 /* ─── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 1200px) {
