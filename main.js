@@ -1273,10 +1273,10 @@ window.addEventListener('load', function() {
       el.textContent = c.names[curLang] || c.names.ru;
       el.style.cssText = [
         'position:absolute',
-        'color:rgba(26,39,63,0.75)',
-        'font-size:9px',
-        'font-weight:600',
-        'letter-spacing:.07em',
+        'color:#1a273f',
+        'font-size:11px',
+        'font-weight:700',
+        'letter-spacing:.06em',
         'text-transform:uppercase',
         'pointer-events:none',
         'transform:translate(-50%,-50%)',
@@ -1284,7 +1284,7 @@ window.addEventListener('load', function() {
         'transition:opacity .4s',
         'white-space:nowrap',
         'font-family:inherit',
-        'text-shadow:0 0 6px rgba(255,255,255,.9),0 0 12px rgba(255,255,255,.6)',
+        'text-shadow:0 0 4px #fff,0 0 4px #fff,0 0 8px #fff,0 0 12px rgba(255,255,255,.9)',
       ].join(';');
       container.appendChild(el);
       return { el, pt: toCartesian(c.lat, c.lng), names: c.names };
@@ -1335,7 +1335,7 @@ window.addEventListener('load', function() {
           const cp = projectPoint(pt, totalPhi, totalTheta);
           el.style.left    = cp.sx + 'px';
           el.style.top     = cp.sy + 'px';
-          el.style.opacity = cp.vis > 0.1 ? String(Math.min(0.8, (cp.vis - 0.1) * 4)) : '0';
+          el.style.opacity = cp.vis > 0.05 ? String(Math.min(1, (cp.vis - 0.05) * 4)) : '0';
         });
       },
     });
