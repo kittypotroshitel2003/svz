@@ -1327,19 +1327,39 @@ window.addEventListener('load', function() {
         state.phi   = totalPhi;
         state.theta = totalTheta;
 
-        // Yerevan label
-        const p = projectPoint(yvPt, totalPhi, totalTheta);
-        label.style.left    = p.sx + 'px';
-        label.style.top     = p.sy + 'px';
-        label.style.opacity = p.vis > 0.05 ? String(Math.min(1, p.vis * 3)) : '0';
+        // Collision avoidance: each label claims a padded box; a label only
+        // shows if its box is free, so tight clusters (Yerevan/Georgia/
+        // Turkey…) don't render on top of each other.
+        const placedBoxes = [];
+        const LABEL_PAD = 5;
+        function claimBox(cx, cy, w, h, anchoredAbove) {
+          const box = anchoredAbove
+            ? { left: cx - w / 2 - LABEL_PAD, right: cx + w / 2 + LABEL_PAD, top: cy - 1.3 * h - LABEL_PAD, bottom: cy - 0.3 * h + LABEL_PAD }
+            : { left: cx - w / 2 - LABEL_PAD, right: cx + w / 2 + LABEL_PAD, top: cy - h / 2 - LABEL_PAD, bottom: cy + h / 2 + LABEL_PAD };
+          for (const b of placedBoxes) {
+            if (box.left < b.right && box.right > b.left && box.top < b.bottom && box.bottom > b.top) return false;
+          }
+          placedBoxes.push(box);
+          return true;
+        }
 
-        // Country labels
-        countryEls.forEach(({ el, pt }) => {
-          const cp = projectPoint(pt, totalPhi, totalTheta);
-          el.style.left    = cp.sx + 'px';
-          el.style.top     = cp.sy + 'px';
-          el.style.opacity = cp.vis > 0.05 ? String(Math.min(1, (cp.vis - 0.05) * 4)) : '0';
-        });
+        // Yerevan label — always highest priority
+        const p = projectPoint(yvPt, totalPhi, totalTheta);
+        label.style.left = p.sx + 'px';
+        label.style.top  = p.sy + 'px';
+        const yvShown = p.vis > 0.05 && claimBox(p.sx, p.sy, label.offsetWidth, label.offsetHeight, true);
+        label.style.opacity = yvShown ? String(Math.min(1, p.vis * 3)) : '0';
+
+        // Country labels — most front-facing ones win collisions
+        countryEls
+          .map(c => ({ c, cp: projectPoint(c.pt, totalPhi, totalTheta) }))
+          .sort((a, b) => b.cp.vis - a.cp.vis)
+          .forEach(({ c, cp }) => {
+            c.el.style.left = cp.sx + 'px';
+            c.el.style.top  = cp.sy + 'px';
+            const shown = cp.vis > 0.05 && claimBox(cp.sx, cp.sy, c.el.offsetWidth, c.el.offsetHeight, false);
+            c.el.style.opacity = shown ? String(Math.min(1, (cp.vis - 0.05) * 4)) : '0';
+          });
       },
     });
 
