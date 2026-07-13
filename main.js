@@ -55,7 +55,7 @@ window.scrollTo(0, 0);
       'faq.q5': 'Подойдёт ли комплекс для растущего бизнеса?',
       'faq.a5': 'Модульная структура позволяет расширять арендуемую площадь без переезда — просто добавляя смежные блоки по мере роста потребностей бизнеса.',
       'faq.q6': 'Кто поможет подобрать подходящий формат?',
-      'faq.a6': 'Наш отдел аренды — leasing@smartvalley.am. Специалисты проконсультируют по всем форматам и помогут найти оптимальное решение.',
+      'faq.a6': 'Наш отдел аренды — leasing@sv-zvartnots.com. Специалисты проконсультируют по всем форматам и помогут найти оптимальное решение.',
       'faq.q7': 'Какой минимальный срок аренды?',
       'faq.a7': 'Минимальный срок аренды составляет 12 месяцев. Для долгосрочного сотрудничества предусмотрены специальные условия и фиксированные ставки на весь период договора.',
       'faq.q8': 'Входят ли коммунальные услуги в арендную ставку?',
@@ -189,7 +189,7 @@ window.scrollTo(0, 0);
       'a1.fact2.label': 'модульных складских блоков',
       'a1.fact3.label': '2026 — плановый срок завершения',
       'a1.h2.3': 'Следующие шаги',
-      'a1.p6': 'После завершения первой очереди будет запущен процесс приёма заявок от арендаторов. Команда по аренде уже проводит консультации для компаний, заинтересованных в заблаговременном бронировании складских блоков. Обратиться можно по адресу leasing@smartvalley.am или через форму на сайте.',
+      'a1.p6': 'После завершения первой очереди будет запущен процесс приёма заявок от арендаторов. Команда по аренде уже проводит консультации для компаний, заинтересованных в заблаговременном бронировании складских блоков. Обратиться можно по адресу leasing@sv-zvartnots.com или через форму на сайте.',
       'a1.p7': 'Вторая очередь проекта, включающая расширение инфраструктуры и строительство дополнительных блоков, запланирована на 2027 год. Детали будут раскрыты по мере подготовки проектной документации.',
       'a1.rel.c1.cat': 'Инфраструктура', 'a1.rel.c1.title': 'Продолжается развитие инженерных систем',
       'a1.rel.c2.cat': 'Технологии',     'a1.rel.c2.title': 'Энергоэффективность как основа комплекса',
@@ -315,7 +315,7 @@ window.scrollTo(0, 0);
       'faq.q5': 'Is the complex suitable for a growing business?',
       'faq.a5': 'The modular structure lets you expand your leased area without relocating — by simply adding adjacent units as your business grows.',
       'faq.q6': 'Who can help us choose the right format?',
-      'faq.a6': 'Contact our leasing team at leasing@smartvalley.am — specialists will advise on all available options and help you find the best fit.',
+      'faq.a6': 'Contact our leasing team at leasing@sv-zvartnots.com — specialists will advise on all available options and help you find the best fit.',
       'faq.q7': 'What is the minimum lease term?',
       'faq.a7': 'The minimum lease term is 12 months. Long-term tenants benefit from special conditions and fixed rates for the full contract period.',
       'faq.q8': 'Are utilities included in the lease rate?',
@@ -447,7 +447,7 @@ window.scrollTo(0, 0);
       'a1.fact2.label': 'modular warehouse units',
       'a1.fact3.label': '2026 — planned completion',
       'a1.h2.3': 'Next steps',
-      'a1.p6': 'Once phase one is complete, tenant applications will open. The leasing team is already consulting with companies interested in early reservations. Contact us at leasing@smartvalley.am or through the form on this site.',
+      'a1.p6': 'Once phase one is complete, tenant applications will open. The leasing team is already consulting with companies interested in early reservations. Contact us at leasing@sv-zvartnots.com or through the form on this site.',
       'a1.p7': 'Phase two — expanding infrastructure and adding more units — is planned for 2027. Details will be published once project documentation is ready.',
       'a1.rel.c1.cat': 'Infrastructure',       'a1.rel.c1.title': 'Engineering systems development continues',
       'a1.rel.c2.cat': 'Technology',            'a1.rel.c2.title': 'Energy efficiency as the foundation',
@@ -570,7 +570,7 @@ window.scrollTo(0, 0);
       'faq.q5': 'Հարմա՞ր է համալիրը աճող բիզնեսի համար։',
       'faq.a5': 'Մոդուլային կառուցվածքը թույլ է տալիս ընդլայնել վարձակալվող մակերեսը՝ ավելացնելով հարակից բլոկներ, առանց տեղափոխության։',
       'faq.q6': 'Ո՞վ կօգնի ճիշտ ձևաչափ ընտրել։',
-      'faq.a6': 'Մեր վարձակալության բաժինը՝ leasing@smartvalley.am։ Մասնագետները կխորհրդատրեն բոլոր ձևաչափների վերաբերյալ։',
+      'faq.a6': 'Մեր վարձակալության բաժինը՝ leasing@sv-zvartnots.com։ Մասնագետները կխորհրդատրեն բոլոր ձևաչափների վերաբերյալ։',
       'faq.q7': 'Ո՞րն է վարձակալության նվազագույն ժամկետը։',
       'faq.a7': 'Վարձակալության նվազագույն ժամկետը 12 ամիս է։ Երկարաժամկետ համագործակցության համար նախատեսված են հատուկ պայմաններ։',
       'faq.q8': 'Կոմունալ ծառայությունները ներառվա՞ծ են վարձի մեջ։',
@@ -700,7 +700,7 @@ window.scrollTo(0, 0);
       'a1.fact2.label': 'մոդուլային պահեստային բլոկ',
       'a1.fact3.label': '2026 — պլանային ավարտ',
       'a1.h2.3': 'Հաջորդ քայլերը',
-      'a1.p6': 'Առաջին փուլի ավարտից հետո կբացվի վարձակալության դիմումների ընդունումը։ Վարձակալության թիմն արդեն խորհրդատրություններ է անցկացնում։ Կապ hաստատեք leasing@smartvalley.am-ի կամ կայքի ձևի միջոցով։',
+      'a1.p6': 'Առաջին փուլի ավարտից հետո կբացվի վարձակալության դիմումների ընդունումը։ Վարձակալության թիմն արդեն խորհրդատրություններ է անցկացնում։ Կապ hաստատեք leasing@sv-zvartnots.com-ի կամ կայքի ձևի միջոցով։',
       'a1.p7': 'Երկրորդ փուլը՝ ենթակառուցվածքի ընդլայնում և լրացուցիչ բլոկների կառուցում, նախատեսված է 2027 թ.-ին։',
       'a1.rel.c1.cat': 'Ենթակառուցվածք',    'a1.rel.c1.title': 'Շարունակվում է ճարտարագիտական համակարգերի զարգացումը',
       'a1.rel.c2.cat': 'Տեխնոլոգիա',        'a1.rel.c2.title': 'Էներգաարդյունավետությունը՝ որպես հիմք',
@@ -1226,23 +1226,28 @@ window.addEventListener('load', function() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const w   = Math.round(container.getBoundingClientRect().width || container.offsetWidth || 500);
 
-    // Generic cartesian precompute
+    // Cartesian precompute — matches cobe's own lat/lng-to-sphere convention
+    // so labels line up with the dot map instead of floating off it.
     function toCartesian(lat, lng) {
-      const latR = lat * Math.PI / 180, lngR = lng * Math.PI / 180;
+      const latR = lat * Math.PI / 180, lngR = lng * Math.PI / 180 - Math.PI;
+      const a = Math.cos(latR);
       return {
-        x: Math.cos(latR) * Math.sin(lngR),
+        x: -a * Math.cos(lngR),
         y: Math.sin(latR),
-        z: Math.cos(latR) * Math.cos(lngR),
+        z: a * Math.sin(lngR),
       };
     }
 
-    // Generic project point to canvas coords given current phi/theta
+    // Project point to canvas coords given current phi/theta (inverse of
+    // cobe's rotation matrix), scaled by the 0.8 sphere radius cobe renders at.
     function projectPoint(pt, phi, theta) {
-      const x1 = pt.x * Math.cos(phi) - pt.z * Math.sin(phi);
-      const z1 = pt.x * Math.sin(phi) + pt.z * Math.cos(phi);
-      const y2 = pt.y * Math.cos(theta) - z1 * Math.sin(theta);
-      const z2 = pt.y * Math.sin(theta) + z1 * Math.cos(theta);
-      return { sx: (x1 + 1) / 2 * w, sy: (-y2 + 1) / 2 * w, vis: z2 };
+      const cphi = Math.cos(phi), sphi = Math.sin(phi);
+      const cth  = Math.cos(theta), sth  = Math.sin(theta);
+      const vx = cphi * pt.x + sphi * pt.z;
+      const vy = sphi * sth * pt.x + cth * pt.y - cphi * sth * pt.z;
+      const vz = -sphi * cth * pt.x + sth * pt.y + cphi * cth * pt.z;
+      const bx = 0.8 * vx, by = 0.8 * vy;
+      return { sx: (bx + 1) / 2 * w, sy: (1 - by) / 2 * w, vis: vz };
     }
 
     // Yerevan
