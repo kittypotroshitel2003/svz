@@ -1274,17 +1274,20 @@ window.addEventListener('load', function() {
       el.style.cssText = [
         'position:absolute',
         'color:#1a273f',
-        'font-size:11px',
+        'background:rgba(255,255,255,.88)',
+        'font-size:10px',
         'font-weight:700',
-        'letter-spacing:.06em',
+        'letter-spacing:.05em',
         'text-transform:uppercase',
+        'padding:2px 6px',
+        'border-radius:3px',
+        'box-shadow:0 1px 4px rgba(0,0,0,.12)',
         'pointer-events:none',
         'transform:translate(-50%,-50%)',
         'opacity:0',
         'transition:opacity .4s',
         'white-space:nowrap',
         'font-family:inherit',
-        'text-shadow:0 0 4px #fff,0 0 4px #fff,0 0 8px #fff,0 0 12px rgba(255,255,255,.9)',
       ].join(';');
       container.appendChild(el);
       return { el, pt: toCartesian(c.lat, c.lng), names: c.names };
