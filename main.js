@@ -118,6 +118,16 @@ window.scrollTo(0, 0);
       'gallery.item3.alt': 'Контрольно-пропускной пункт',
       'gallery.item4.alt': 'Складское помещение изнутри',
       'gallery.item5.alt': 'Стеллажи склада',
+      'gallery.item1.title': 'Терминал 1',
+      'gallery.item1.subtitle': 'Зона погрузки, вход B',
+      'gallery.item2.title': 'Терминал 1',
+      'gallery.item2.subtitle': 'Зона погрузки, вход A',
+      'gallery.item3.title': 'Безопасность',
+      'gallery.item3.subtitle': 'Контрольно-пропускной пункт',
+      'gallery.item4.title': 'Склад',
+      'gallery.item4.subtitle': 'Стеллажное хранение',
+      'gallery.item5.title': 'Склад',
+      'gallery.item5.subtitle': 'Логистика и комплектация',
       'gallery.prev': 'Предыдущее фото',
       'gallery.next': 'Следующее фото',
       'contacts.label': 'контакты',
@@ -388,6 +398,16 @@ window.scrollTo(0, 0);
       'gallery.item3.alt': 'Security checkpoint',
       'gallery.item4.alt': 'Warehouse interior',
       'gallery.item5.alt': 'Warehouse storage racks',
+      'gallery.item1.title': 'Terminal 1',
+      'gallery.item1.subtitle': 'Loading zone, entrance B',
+      'gallery.item2.title': 'Terminal 1',
+      'gallery.item2.subtitle': 'Loading zone, entrance A',
+      'gallery.item3.title': 'Security',
+      'gallery.item3.subtitle': 'Checkpoint & access control',
+      'gallery.item4.title': 'Warehouse',
+      'gallery.item4.subtitle': 'Racking storage',
+      'gallery.item5.title': 'Warehouse',
+      'gallery.item5.subtitle': 'Logistics & fulfillment',
       'gallery.prev': 'Previous photo',
       'gallery.next': 'Next photo',
       'contacts.label': 'contacts',
@@ -653,6 +673,16 @@ window.scrollTo(0, 0);
       'gallery.item3.alt': 'Անվտանգության կետ',
       'gallery.item4.alt': 'Պահեստի ներքին տարածք',
       'gallery.item5.alt': 'Պահեստի դարակաշարեր',
+      'gallery.item1.title': 'Տերմինալ 1',
+      'gallery.item1.subtitle': 'Բեռնման գոտի, մուտք B',
+      'gallery.item2.title': 'Տերմինալ 1',
+      'gallery.item2.subtitle': 'Բեռնման գոտի, մուտք A',
+      'gallery.item3.title': 'Անվտանգություն',
+      'gallery.item3.subtitle': 'Անցակետ և հսկողություն',
+      'gallery.item4.title': 'Պահեստ',
+      'gallery.item4.subtitle': 'Դարակավոր պահեստավորում',
+      'gallery.item5.title': 'Պահեստ',
+      'gallery.item5.subtitle': 'Լոգիստիկա և կոմպլեկտավորում',
       'gallery.prev': 'Նախորդ լուսանկարը',
       'gallery.next': 'Հաջորդ լուսանկարը',
       'contacts.label': 'կոնտակտներ',
@@ -2028,60 +2058,112 @@ document.querySelectorAll('.news-card').forEach(card => cardObserver.observe(car
   });
 })();
 
-/* ─── GALLERY LIGHTBOX ──────────────────────────────────── */
+/* ─── GALLERY: expanding-panel slider + lightbox ─────────── */
 (function () {
-  const items = Array.from(document.querySelectorAll('.gallery__item'));
-  if (!items.length) return;
+  const track = document.getElementById('gallery-panels');
+  const panels = Array.from(document.querySelectorAll('.gallery__panel'));
+  if (!track || !panels.length) return;
 
+  const dots = Array.from(document.querySelectorAll('.gallery__dot'));
+  const mobileQuery = window.matchMedia('(max-width: 640px)');
+  let activeIndex = panels.findIndex(p => p.classList.contains('is-active'));
+  if (activeIndex < 0) activeIndex = 0;
+
+  function setActive(index) {
+    activeIndex = index;
+    panels.forEach((p, i) => p.classList.toggle('is-active', i === index));
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+  }
+
+  function scrollToSlide(index, smooth) {
+    track.scrollTo({ left: index * track.clientWidth, behavior: smooth === false ? 'auto' : 'smooth' });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      setActive(i);
+      if (mobileQuery.matches) scrollToSlide(i);
+    });
+  });
+
+  // Sync active/dots to scroll position on the mobile swipe slider
+  let scrollRaf = null;
+  track.addEventListener('scroll', () => {
+    if (!mobileQuery.matches) return;
+    if (scrollRaf) cancelAnimationFrame(scrollRaf);
+    scrollRaf = requestAnimationFrame(() => {
+      const w = track.clientWidth;
+      if (!w) return;
+      const i = Math.round(track.scrollLeft / w);
+      if (i !== activeIndex && i >= 0 && i < panels.length) setActive(i);
+    });
+  });
+
+  // Keep the two layouts in sync when crossing the breakpoint
+  mobileQuery.addEventListener('change', e => {
+    if (e.matches) scrollToSlide(activeIndex, false);
+  });
+
+  /* ── lightbox ── */
   const overlay    = document.getElementById('gallery-lightbox');
   const stageImg   = document.getElementById('gallery-lightbox-img');
   const counterEl  = document.getElementById('gallery-lightbox-counter');
   const closeBtn   = document.getElementById('gallery-lightbox-close');
   const prevBtn    = document.getElementById('gallery-lightbox-prev');
   const nextBtn    = document.getElementById('gallery-lightbox-next');
-  let current = 0;
+  let lightboxIndex = 0;
   let lastFocused = null;
 
-  function show(index) {
-    current = (index + items.length) % items.length;
-    const img = items[current].querySelector('img');
+  function showInLightbox(index) {
+    lightboxIndex = (index + panels.length) % panels.length;
+    const img = panels[lightboxIndex].querySelector('.gallery__panel-srcref');
     stageImg.src = img.dataset.full;
     stageImg.alt = img.alt;
-    counterEl.textContent = `${current + 1} / ${items.length}`;
+    counterEl.textContent = `${lightboxIndex + 1} / ${panels.length}`;
   }
 
-  function open(index) {
+  function openLightbox(index) {
     lastFocused = document.activeElement;
-    show(index);
+    showInLightbox(index);
     overlay.setAttribute('aria-hidden', 'false');
     overlay.classList.add('is-open');
     document.body.classList.add('gallery-lightbox-open');
     requestAnimationFrame(() => closeBtn.focus());
   }
 
-  function close() {
+  function closeLightbox() {
     overlay.classList.remove('is-open');
     overlay.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('gallery-lightbox-open');
     lastFocused?.focus();
   }
 
-  items.forEach((item, i) => {
-    item.addEventListener('click', () => open(i));
-    item.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+  panels.forEach((panel, i) => {
+    function handleActivate() {
+      // Mobile: every slide is already "full size" — tapping it zooms in.
+      // Desktop/tablet: tapping the already-expanded panel zooms in;
+      // tapping a collapsed one just brings it forward.
+      if (mobileQuery.matches || panel.classList.contains('is-active')) {
+        openLightbox(i);
+      } else {
+        setActive(i);
+      }
+    }
+    panel.addEventListener('click', handleActivate);
+    panel.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleActivate(); }
     });
   });
 
-  closeBtn.addEventListener('click', close);
-  prevBtn.addEventListener('click', () => show(current - 1));
-  nextBtn.addEventListener('click', () => show(current + 1));
-  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', () => showInLightbox(lightboxIndex - 1));
+  nextBtn.addEventListener('click', () => showInLightbox(lightboxIndex + 1));
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
   document.addEventListener('keydown', e => {
     if (!overlay.classList.contains('is-open')) return;
-    if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowLeft') show(current - 1);
-    else if (e.key === 'ArrowRight') show(current + 1);
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') showInLightbox(lightboxIndex - 1);
+    else if (e.key === 'ArrowRight') showInLightbox(lightboxIndex + 1);
   });
 })();
 
