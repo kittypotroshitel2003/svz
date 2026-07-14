@@ -1,6 +1,14 @@
 /* ─── RESET & BASE ─────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; overscroll-behavior-x: none; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  overscroll-behavior-x: none;
+  /* Matches the footer (always the last section) so short pages on tall
+     viewports don't expose a mismatched blank strip below the footer. */
+  background: var(--dark);
+}
 body {
   font-family: 'Onest', -apple-system, system-ui, sans-serif;
   background: #f0f0f0;
