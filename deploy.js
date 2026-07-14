@@ -367,6 +367,7 @@ const STATIC_IGNORE_ROOT = new Set([
   "temporary screenshots",
   "server", // Go form-relay source + compiled binary
   "ops",     // server provisioning artifacts
+  "backend", // contact-form mailer source (deployed manually to the server, not part of the static site)
 ]);
 
 // Skip debug/screenshot artifacts at root level by prefix pattern
