@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="hero-image.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=1784028465">
+  <link rel="stylesheet" href="style.css?v=1784031838">
   <script>(function(){try{var n=(performance.getEntriesByType('navigation')[0]||{}).type;if(n!=='reload'&&document.referrer&&new URL(document.referrer).origin===location.origin)document.documentElement.classList.add('skip-pl');}catch(e){}})();</script>
 </head>
 <body class="pl-active">
@@ -612,6 +612,10 @@
     <p class="form__desc reveal" style="transition-delay:0.1s" data-i18n="form.desc">Расскажите о требованиях к площади, логистике и организации хранения — мы подготовим решение, соответствующее вашим операционным задачам.</p>
   </div>
   <form class="form__body" id="form-main" novalidate>
+    <input type="hidden" name="access_key" value="a467c572-95ca-4b71-8c17-cffeedc82db4">
+    <input type="hidden" name="subject" value="Новая заявка — Smart Valley Zvartnots">
+    <input type="hidden" name="from_name" value="Smart Valley Zvartnots — сайт">
+    <input type="checkbox" name="botcheck" class="form__honeypot" tabindex="-1" autocomplete="off">
     <div class="reveal" style="transition-delay:0.2s">
       <div class="form__fields">
         <div class="form__field-wrap">
@@ -631,6 +635,7 @@
         <span data-i18n="form.submit">Отправить</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
       </button>
+      <p class="form__submit-error" id="form-submit-error" data-i18n="form.err.submit">Не удалось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.</p>
       <p class="form__legal" data-i18n="form.legal">Отправляя заявку, вы соглашаетесь с обработкой персональных данных.</p>
     </div>
     <div class="form__right reveal" style="transition-delay:0.15s">
@@ -752,6 +757,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
-<script src="main.js?v=1784027188"></script>
+<script src="main.js?v=1784031838"></script>
 </body>
 </html>

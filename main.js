@@ -149,6 +149,7 @@ window.scrollTo(0, 0);
       'form.err.name': 'Пожалуйста, введите ваше имя',
       'form.err.company': 'Пожалуйста, введите название компании',
       'form.err.phone': 'Введите корректный номер телефона',
+      'form.err.submit': 'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.',
       'footer.tagline': 'Современное складское пространство с гибкой модульной системой хранения',
       'footer.nav.complex': 'Комплекс',
       'faq.label2': 'Вопросы',
@@ -429,6 +430,7 @@ window.scrollTo(0, 0);
       'form.err.name': 'Please enter your name',
       'form.err.company': 'Please enter your company name',
       'form.err.phone': 'Please enter a valid phone number',
+      'form.err.submit': 'Couldn\'t send your request. Please try again or contact us directly.',
       'footer.tagline': 'Modern warehouse space with a flexible modular storage system',
       'footer.nav.complex': 'Complex',
       'faq.label2': 'FAQ',
@@ -702,6 +704,7 @@ window.scrollTo(0, 0);
       'form.err.name': 'Խնդրում ենք մուտքագրել ձեր անունը',
       'form.err.company': 'Խնդրում ենք մուտքագրել ընկերության անունը',
       'form.err.phone': 'Մուտքագրեք ճիշտ հեռախոսահամար',
+      'form.err.submit': 'Հայտը չհաջողվեց ուղարկել։ Փորձեք կրկին կամ գրեք մեզ ուղղակիորեն։',
       'footer.tagline': 'Ժամանակակից պահեստային տարածք՝ ճկուն մոդուլային պահեստավորման համակարգով',
       'footer.nav.complex': 'Համալիր',
       'faq.label2': 'ՀՏՀ',
@@ -1617,7 +1620,10 @@ window.addEventListener('load', function() {
     inp.addEventListener('input', () => { if (inp.classList.contains('is-error')) clearError(inp); });
   });
 
-  form.addEventListener('submit', e => {
+  const submitBtn  = form.querySelector('.form__submit');
+  const submitErr  = document.getElementById('form-submit-error');
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     let valid = true;
     const nameInp  = form.querySelector('[name="name"]');
@@ -1645,14 +1651,39 @@ window.addEventListener('load', function() {
 
     if (!valid) return;
 
-    const overlay = document.getElementById('form-success-overlay');
-    if (overlay) {
-      overlay.classList.add('is-open');
-      overlay.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('popup-open');
+    // Honeypot: bots tend to fill every field. Quietly stop, no error shown.
+    if (form.querySelector('[name="botcheck"]')?.checked) return;
+
+    submitErr?.classList.remove('is-visible');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('is-loading');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.success) throw new Error(data.message || 'submit failed');
+
+      const overlay = document.getElementById('form-success-overlay');
+      if (overlay) {
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('popup-open');
+      }
+      form.reset();
+      form.querySelectorAll('.form__input').forEach(inp => inp.classList.remove('is-success', 'is-error'));
+    } catch (err) {
+      if (submitErr) {
+        submitErr.textContent = t['form.err.submit'] || 'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам напрямую.';
+        submitErr.classList.add('is-visible');
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('is-loading');
     }
-    form.reset();
-    form.querySelectorAll('.form__input').forEach(inp => inp.classList.remove('is-success', 'is-error'));
   });
 })();
 

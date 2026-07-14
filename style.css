@@ -1217,6 +1217,23 @@ body.gallery-lightbox-open { overflow: hidden; }
 }
 .form__submit:hover { background: #e04f30; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(249,88,56,0.4); }
 .form__submit:active { transform: scale(0.98); }
+.form__submit:disabled { opacity: 0.7; cursor: default; pointer-events: none; }
+.form__submit.is-loading svg { animation: form-submit-spin 0.8s linear infinite; }
+@keyframes form-submit-spin { to { transform: rotate(360deg); } }
+.form__honeypot {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.form__submit-error {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e53935;
+  margin-top: 14px;
+}
+.form__submit-error.is-visible { display: block; }
 .form__legal {
   font-size: 15px;
   font-weight: 300;
