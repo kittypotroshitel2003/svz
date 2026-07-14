@@ -2117,7 +2117,7 @@ document.querySelectorAll('.news-card').forEach(card => cardObserver.observe(car
   function showInLightbox(index) {
     lightboxIndex = (index + panels.length) % panels.length;
     const img = panels[lightboxIndex].querySelector('.gallery__panel-img');
-    stageImg.src = img.dataset.full;
+    stageImg.src = img.src;
     stageImg.alt = img.alt;
     counterEl.textContent = `${lightboxIndex + 1} / ${panels.length}`;
   }
