@@ -110,6 +110,16 @@ window.scrollTo(0, 0);
       'ticker.log': 'Логистика',
       'ticker.mfg': 'Производство',
       'ticker.scale': 'Масштабирование',
+      'gallery.label': 'галерея',
+      'gallery.heading': 'Комплекс в фотографиях',
+      'gallery.desc': 'Фотографии терминалов, контрольно-пропускного пункта и складских помещений комплекса.',
+      'gallery.item1.alt': 'Терминал 1 — погрузочные доки',
+      'gallery.item2.alt': 'Терминал 1 — вход A',
+      'gallery.item3.alt': 'Контрольно-пропускной пункт',
+      'gallery.item4.alt': 'Складское помещение изнутри',
+      'gallery.item5.alt': 'Стеллажи склада',
+      'gallery.prev': 'Предыдущее фото',
+      'gallery.next': 'Следующее фото',
       'contacts.label': 'контакты',
       'contacts.heading': 'Контактная информация',
       'contact.address.label': 'Адрес',
@@ -370,6 +380,16 @@ window.scrollTo(0, 0);
       'ticker.log': 'Logistics',
       'ticker.mfg': 'Manufacturing',
       'ticker.scale': 'Scaling',
+      'gallery.label': 'gallery',
+      'gallery.heading': 'The complex in photos',
+      'gallery.desc': 'Photos of the terminals, the security checkpoint, and the warehouse spaces.',
+      'gallery.item1.alt': 'Terminal 1 — loading docks',
+      'gallery.item2.alt': 'Terminal 1 — entrance A',
+      'gallery.item3.alt': 'Security checkpoint',
+      'gallery.item4.alt': 'Warehouse interior',
+      'gallery.item5.alt': 'Warehouse storage racks',
+      'gallery.prev': 'Previous photo',
+      'gallery.next': 'Next photo',
       'contacts.label': 'contacts',
       'contacts.heading': 'Contact information',
       'contact.address.label': 'Address',
@@ -625,6 +645,16 @@ window.scrollTo(0, 0);
       'ticker.log': 'Լոգիստիկա',
       'ticker.mfg': 'Արտադրություն',
       'ticker.scale': 'Մասշտաբում',
+      'gallery.label': 'պատկերասրահ',
+      'gallery.heading': 'Համալիրը լուսանկարներում',
+      'gallery.desc': 'Տերմինալների, անվտանգության կետի և պահեստային տարածքների լուսանկարներ։',
+      'gallery.item1.alt': 'Տերմինալ 1 — բեռնման դոկեր',
+      'gallery.item2.alt': 'Տերմինալ 1 — մուտք A',
+      'gallery.item3.alt': 'Անվտանգության կետ',
+      'gallery.item4.alt': 'Պահեստի ներքին տարածք',
+      'gallery.item5.alt': 'Պահեստի դարակաշարեր',
+      'gallery.prev': 'Նախորդ լուսանկարը',
+      'gallery.next': 'Հաջորդ լուսանկարը',
       'contacts.label': 'կոնտակտներ',
       'contacts.heading': 'Կոնտակտային տեղեկություններ',
       'contact.address.label': 'Հասցե',
@@ -812,6 +842,12 @@ window.scrollTo(0, 0);
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const key = el.dataset.i18nAria;
       if (T[lang][key] !== undefined) el.setAttribute('aria-label', T[lang][key]);
+    });
+
+    // data-i18n-alt: img alt attribute
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.dataset.i18nAlt;
+      if (T[lang][key] !== undefined) el.alt = T[lang][key];
     });
 
     // Update lang switcher buttons active state
@@ -1989,6 +2025,63 @@ document.querySelectorAll('.news-card').forEach(card => cardObserver.observe(car
   overlay.addEventListener('click', e => { if (e.target === overlay) closePopup(); });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && overlay.classList.contains('is-open')) closePopup();
+  });
+})();
+
+/* ─── GALLERY LIGHTBOX ──────────────────────────────────── */
+(function () {
+  const items = Array.from(document.querySelectorAll('.gallery__item'));
+  if (!items.length) return;
+
+  const overlay    = document.getElementById('gallery-lightbox');
+  const stageImg   = document.getElementById('gallery-lightbox-img');
+  const counterEl  = document.getElementById('gallery-lightbox-counter');
+  const closeBtn   = document.getElementById('gallery-lightbox-close');
+  const prevBtn    = document.getElementById('gallery-lightbox-prev');
+  const nextBtn    = document.getElementById('gallery-lightbox-next');
+  let current = 0;
+  let lastFocused = null;
+
+  function show(index) {
+    current = (index + items.length) % items.length;
+    const img = items[current].querySelector('img');
+    stageImg.src = img.dataset.full;
+    stageImg.alt = img.alt;
+    counterEl.textContent = `${current + 1} / ${items.length}`;
+  }
+
+  function open(index) {
+    lastFocused = document.activeElement;
+    show(index);
+    overlay.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('is-open');
+    document.body.classList.add('gallery-lightbox-open');
+    requestAnimationFrame(() => closeBtn.focus());
+  }
+
+  function close() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gallery-lightbox-open');
+    lastFocused?.focus();
+  }
+
+  items.forEach((item, i) => {
+    item.addEventListener('click', () => open(i));
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', () => show(current - 1));
+  nextBtn.addEventListener('click', () => show(current + 1));
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', e => {
+    if (!overlay.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(current - 1);
+    else if (e.key === 'ArrowRight') show(current + 1);
   });
 })();
 

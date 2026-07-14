@@ -487,6 +487,48 @@
   </section>
 </div>
 
+<!-- ═══════════════ GALLERY ═══════════════════════════════ -->
+<section class="gallery" id="gallery">
+  <div class="section-label">
+    <span class="section-label__dot"></span>
+    <span class="section-label__text" data-i18n="gallery.label">галерея</span>
+  </div>
+  <h2 class="gallery__heading reveal" data-i18n="gallery.heading">Комплекс в фотографиях</h2>
+  <p class="gallery__desc reveal" style="transition-delay:0.15s" data-i18n="gallery.desc">Фотографии терминалов, контрольно-пропускного пункта и складских помещений комплекса.</p>
+  <div class="gallery__grid">
+    <div class="gallery__item" data-index="0" role="button" tabindex="0" aria-haspopup="dialog">
+      <img src="gallery-1-thumb.webp" data-full="gallery-1.webp" alt="Терминал 1 — погрузочные доки" data-i18n-alt="gallery.item1.alt" loading="lazy" decoding="async" width="640" height="355">
+      <span class="gallery__zoom" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </span>
+    </div>
+    <div class="gallery__item" data-index="1" role="button" tabindex="0" aria-haspopup="dialog">
+      <img src="gallery-2-thumb.webp" data-full="gallery-2.webp" alt="Терминал 1 — вход A" data-i18n-alt="gallery.item2.alt" loading="lazy" decoding="async" width="640" height="360">
+      <span class="gallery__zoom" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </span>
+    </div>
+    <div class="gallery__item" data-index="2" role="button" tabindex="0" aria-haspopup="dialog">
+      <img src="gallery-3-thumb.webp" data-full="gallery-3.webp" alt="Контрольно-пропускной пункт" data-i18n-alt="gallery.item3.alt" loading="lazy" decoding="async" width="640" height="328">
+      <span class="gallery__zoom" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </span>
+    </div>
+    <div class="gallery__item" data-index="3" role="button" tabindex="0" aria-haspopup="dialog">
+      <img src="gallery-4-thumb.webp" data-full="gallery-4.webp" alt="Складское помещение изнутри" data-i18n-alt="gallery.item4.alt" loading="lazy" decoding="async" width="640" height="360">
+      <span class="gallery__zoom" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </span>
+    </div>
+    <div class="gallery__item" data-index="4" role="button" tabindex="0" aria-haspopup="dialog">
+      <img src="gallery-5-thumb.webp" data-full="gallery-5.webp" alt="Стеллажи склада" data-i18n-alt="gallery.item5.alt" loading="lazy" decoding="async" width="640" height="476">
+      <span class="gallery__zoom" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ CONTACTS + MAP ═══════════════════════ -->
 <section class="contacts" id="contacts">
   <div class="section-label">
@@ -625,6 +667,25 @@
   </div>
 </div>
 
+<!-- ═══ GALLERY LIGHTBOX ═════════════════════════════════════ -->
+<div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Галерея">
+  <button class="gallery-lightbox__close" id="gallery-lightbox-close" aria-label="Закрыть" data-i18n-aria="popup.close">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M1.5 1.5L16.5 16.5M16.5 1.5L1.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="gallery-lightbox-prev" aria-label="Предыдущее фото" data-i18n-aria="gallery.prev">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="gallery-lightbox-next" aria-label="Следующее фото" data-i18n-aria="gallery.next">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="gallery-lightbox__stage">
+    <img id="gallery-lightbox-img" src="" alt="">
+  </div>
+  <div class="gallery-lightbox__counter" id="gallery-lightbox-counter"></div>
+</div>
+
 <!-- ═══ SUCCESS POPUP ════════════════════════════════════════ -->
 <div id="form-success-overlay" class="success-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="success-popup-title">
   <div class="success-popup">
@@ -660,6 +721,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
-<script src="main.js?v=1783936916"></script>
+<script src="main.js?v=1784021360"></script>
 </body>
 </html>
