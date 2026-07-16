@@ -1462,6 +1462,10 @@ body.gallery-lightbox-open { overflow: hidden; }
 
 @media (max-width: 640px) {
   :root { --pad: 48px; }
+  /* TEMPORARY: header unstuck from viewport on mobile — scrolls away with
+     the page instead of staying pinned. Remove this rule to restore the
+     sticky/fixed header. */
+  .nav { position: absolute; }
   .nav { padding: 14px 24px; }
   .hero__content { padding: 0 24px 48px; }
   .about, .infrastructure, .contacts, .contact-form-section, .faq, .news, .gallery { padding-left: 24px; padding-right: 24px; }
